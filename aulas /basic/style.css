@@ -1,0 +1,63 @@
+/* PROPRIEDADES E VALORES
+    propriedade: valor;
+
+    Ex.:
+    backgound: black;
+    color: white;
+
+   FORMAS DE DECLARAR O CSSS
+
+    1. CSS Inline: atributo 'style=" "' dentro das tags HTML, elemento por elemento.
+
+    *Tem prioridade sobre o estilo definido em arquivo separado .css
+
+    Ex.:  <h2 style="background: black; color: white">
+            CSS Inline
+          </h2>
+
+    2. CSS Interno: Bloco de código dentro da tag <head></head> do doc/pag HTML
+                    Usa-se a tag: <style> regras / bloco de cod  aqui </style>
+
+    Ex.:
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Trilha de CSS</title>
+      <style>
+    h3 {
+      background: black;
+      color: white;
+      font-size: x-large;
+    }
+      </style>
+    </head>
+    <body>
+      <h3> CSS Interno </h3>
+    </body>
+    </html>
+
+    3. CSS Externo: É criado um arquivo com a extensão .css com todas as regras CSS
+    que queremos aplicar, esse arquivo é referenciado no <head> ... </head> do doc HTML
+    através da tag <link rel="stylesheet" href="style.css"/>
+
+    Ex.:
+*/
+
+h4 {
+  background: black;
+  color: white;
+  font-size: x-large;
+}
+
+/*
+
+  SELETORES CSS
+
+  Seletor por Tipo: Busca elementos por uma tag HTML específica (ex.: <mark> conteúdo a ser estilizado </mark>, <h1> conteúdo a ser estilizado </h1>)
+  Seletor por id (#): Busca elementos através do atributo "id"
+  Seletor por class (.): Busca elementos através do atributo "class"
+  Seletor Universal (*): Seleciona todos os elementos HTML
+  Seletor de Atributo ([atrib]): Seleciona elementos que possuem um atributo específico em nosso documento HTML e conseguimos também buscar atributos com um valor específico.
+
+*/
