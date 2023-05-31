@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trilha CSS</title>
+    <style>
+      * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .topo{
+        margin-left: 1380px;
+      }
+      #paleta {
+        margin: 10px 0 50px 350px;
+      }
+      li {
+        background: aqua;
+      }
+      #pre-definidas {
+        font-weight: bold;
+        color: springgreen;
+        background: black;
+      }
+      #current-color {
+        color: orange;
+        font-weight: bold;
+        border: 2px solid currentColor;
+        background: transparent;
+      }
+      #rgb {
+        color: rgb(0, 60, 255);
+        font-weight: bold;
+      }
+      #rgba {
+        color: rgba(240, 65, 196, 0.5);
+      }
+      #hex {
+        color: #ff0000;
+        font-weight: bold;
+      }
+      #hex-transparencia {
+        color: #ff000050;
+        font-weight: bold;
+      }
+      #hsl-list li {
+        background: none;
+      }
+      #hsl {
+        font-weight: bold;
+        color: hsl(45, 90%, 60%);
+      }
+      #hsla {
+        font-weight: bold;
+        color: hsl(45, 90%, 60%, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <a id="topo"></a><h1>Cores</h1>
+    <p>Existem várias formas de definirmos cores utilizando o CSS. São elas:</p>
+    <ul>
+      <li id="pre-definidas">Cores pre-definidas</li>
+      <li id="current-color">Palavra-chave "currentcolor"</li>
+      <li id="hex">Hexadecimal</li>
+      <li id="hex-transparencia">Hexadecimal com transparência</li>
+      <li id="rgb">RGB</li>
+      <li id="rgba">RGBA</li>
+      <li id="hsl">HSL</li>
+      <li id="hsla">HSLA</li>
+    </ul>
+    <hr />
+    <h3>HSL</h3>
+    <p>hsl (hue, saturation, lightness)</p>
+    <ul id="hsl-list">
+      <li>
+        <b>Hue (matiz):</b> é o grau na roda de cores (de 0 a 360 graus)
+        <ul>
+          <li>0 ou 360 -> vermelho</li>
+          <li>120 -> verde</li>
+          <li>240 -> azul</li>
+        </ul>
+      </li>
+      <li>
+        <b>Saturation (saturação):</b> valor percentual
+        <ul>
+          <li>0% -> tom de cinza</li>
+          <li>100% cor total</li>
+        </ul>
+      </li>
+      <li>
+        <b>Lightness (brilho):</b> brilho / luminosidade da cor
+        <ul>
+          <li>0% -> preto</li>
+          <li>100% -> branco</li>
+        </ul>
+      </li>
+    </ul>
+    <figure>
+      <img
+        id="paleta"
+        src="https://i.pinimg.com/736x/46/62/56/466256653846062e52e3b0f32446ecd5.jpg"
+        alt="roda de cores hsl"
+      />
+    </figure>
+    <hr />
+    <a id="index"><h2>Aulas</h2></a>
+    <ul>
+      <li><a href="index_II.html" target="_self" rel="noopener">Imagens</a></li>
+      <li><a href="index_III.html" target="_self" rel="noopener">Bordas</a></li>
+      <li><a href="index_IV.html" target="_self" rel="noopener">Fontes</a></li>
+      <li><a href="index_V.html" target="_self" rel="noopener">Textos</a></li>
+      <li><a href="index_VI.html" target="_self" rel="noopener">Sombras</a></li>
+      <li><a href="index_VII.html" target="_self" rel="noopener">Redefinindo Padrões</a></li>
+      <li><a href="index_VIII.html" target="_self" rel="noopener">Unidades de Medidas</a></li>
+    </ul>
+    <a class="topo" href="#topo"><img title="Topo" src="https://cdn-icons-png.flaticon.com/24/130/130906.png" alt="seta para o topo"></a> 
+  </body>
+</html>

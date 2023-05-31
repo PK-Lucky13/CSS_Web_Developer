@@ -1,0 +1,149 @@
+body{
+  font-family: Roboto, sans-serif;
+  color: white;
+  background-color: black;
+  }
+  .topo #seta{
+    margin-left: 1300px;
+    margin-right: 10px;
+    width: auto;
+    background-color: white;
+    border-radius: 50%;
+    border: 5px white solid;
+  }
+  .exemplo{
+    width: 200px;
+    height: 200px;
+    background-color: #2b2b2b;
+  }
+  .exemplo-1{
+    width: 200px;
+    height: 200px;
+    border: 30px solid;
+    background-color: #2b2b2b;
+    margin: 50px auto;
+  }
+  #width{
+    border-width: 10px 20px 30px 40px /*thick 10px*/;
+    border-style: solid;
+  }
+  #style{
+    border-width: 10px;
+    border-style: /*none solid dotted double dashed groove outset inset ridge*/ dashed dotted solid double;
+  }
+  #color{
+    border-width: 10px;
+    border-style: solid;
+    border-color: gray darkgrey;
+  }
+  /*.border{10px solid white}*/
+  /*.border-bottom{15px doted gray}*/
+  /*.border-top{35px double lightgray}*/
+  /*.border-top-style{groove}*/
+  #redondo{
+    border-width: 10px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 50%;
+  }
+  #arredondado{
+    border-radius: 15px;
+  }
+  #arredondado-1{
+    border-radius: 15px 0px 35px 50px;
+  }
+  #ovalado{
+    border-radius: /*15px/30px*/ 50px/100px;
+  }
+  #oval{
+    border-radius: 50%;
+    height: 300px;
+  }
+  #exemploI{
+    border-image-source: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/LH_95.jpg/640px-LH_95.png');
+  }
+  #exemploI-1{
+    border-image-source: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/LH_95.jpg/640px-LH_95.png');
+    border-image-slice: 170;
+    /*border-image-repeat: repeat;*/
+  }
+  #exemploII{
+    border-image-source: url('https://s3-alpha.figma.com/hub/file/3524654737/resized/800x480/440ef745-9c5b-4bdc-b1fa-d8d2f86405d6-cover.png');
+    border-image-slice: 163;
+    border-image-repeat: repeat;
+  }
+  #exemploII-1{
+    border-image-source: url('https://s3-alpha.figma.com/hub/file/3524654737/resized/800x480/440ef745-9c5b-4bdc-b1fa-d8d2f86405d6-cover.png');
+    border-image-slice: 163 fill;
+    border-image-repeat: repeat;
+  }
+  #exemploII-2{
+    border-image-source: url('https://s3-alpha.figma.com/hub/file/3524654737/resized/800x480/440ef745-9c5b-4bdc-b1fa-d8d2f86405d6-cover.png');
+    border-image-slice: 163 fill;
+  }
+  #exemploIII{
+    border-image-source: linear-gradient(rgb(1, 115, 202), rgb(0, 242, 255));
+  }
+  #exemploIII-1{
+    border-image-source: linear-gradient(rgb(1, 115, 202), rgb(0, 242, 255));
+    border-image-slice: 10;
+  }
+  #exemploII-3{
+    border-image-source: url('https://s3-alpha.figma.com/hub/file/3524654737/resized/800x480/440ef745-9c5b-4bdc-b1fa-d8d2f86405d6-cover.png');
+    border-image-repeat: repeat;
+    border-image-slice: 163;
+    border-image-width: 10px;
+  }
+  #exemploII-3-1{
+    border-image-source: url('https://s3-alpha.figma.com/hub/file/3524654737/resized/800x480/440ef745-9c5b-4bdc-b1fa-d8d2f86405d6-cover.png');
+    border-image-repeat: repeat;
+    border-image-slice: 163;
+    border-image-width: 10px 20px 30px 40px;
+  }
+  #exemploII-4{
+    border-image-source: url('https://s3-alpha.figma.com/hub/file/3524654737/resized/800x480/440ef745-9c5b-4bdc-b1fa-d8d2f86405d6-cover.png');
+    border-image-slice: 163;
+    border-image-repeat: stretch;
+  }
+  #exemploII-4-1{
+    border-image-source: url('https://s3-alpha.figma.com/hub/file/3524654737/resized/800x480/440ef745-9c5b-4bdc-b1fa-d8d2f86405d6-cover.png');
+    border-image-slice: 163;
+    border-image-repeat: round;
+  }
+  #exemploII-4-2{
+    border-image-source: url('https://s3-alpha.figma.com/hub/file/3524654737/resized/800x480/440ef745-9c5b-4bdc-b1fa-d8d2f86405d6-cover.png');
+    border-image-repeat: space;
+    border-image-slice: 163;
+  }
+  #exemploII-4-3{
+    border-image-source: url('https://s3-alpha.figma.com/hub/file/3524654737/resized/800x480/440ef745-9c5b-4bdc-b1fa-d8d2f86405d6-cover.png');
+    border-image-repeat:  round space;
+    border-image-slice: 163;
+  }
+  #exemploII-4-4{
+    border-image-source: url('https://s3-alpha.figma.com/hub/file/3524654737/resized/800x480/440ef745-9c5b-4bdc-b1fa-d8d2f86405d6-cover.png');
+    border-image-repeat: round;
+    border-image-slice: 163;
+    border-image-outset: 30px;
+  }
+  #exemploII-4-4-1{
+    border-image-source: url('https://s3-alpha.figma.com/hub/file/3524654737/resized/800x480/440ef745-9c5b-4bdc-b1fa-d8d2f86405d6-cover.png');
+    border-image-repeat: round;
+    border-image-slice: 163;
+    border-image-outset: 2.5;
+  }
+  #exemploIII-2{
+    margin-top: 100px;
+    border-image-source: linear-gradient(rgb(1, 115, 202), rgb(0, 242, 255));
+    border-image-slice: 10;
+    border-image-outset: 2;
+  }
+  #exemploII-4-4-2{
+    border-image-source: url('https://s3-alpha.figma.com/hub/file/3524654737/resized/800x480/440ef745-9c5b-4bdc-b1fa-d8d2f86405d6-cover.png');
+    border-image-repeat: round;
+    border-image-slice: 163;
+    border-image-outset: 30px 10px;
+  }
+  #exemplo-resumido{
+    border-image: url('https://s3-alpha.figma.com/hub/file/3524654737/resized/800x480/440ef745-9c5b-4bdc-b1fa-d8d2f86405d6-cover.png') 169 / 10px / 1 round;
+  }

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@font-face {
+  font-family: gamer;
+  src: /*local(),*/ url('../font/PressStart2P-Regular.ttf');
+}
+@font-face {
+  font-family: alternativa;
+  src: url('../font/fonts/static/Oxanium-Regular.ttf');
+  font-weight: normal;
+}
+@font-face {
+  font-family: alternativa;
+  src: url('../font/fonts/static/Oxanium-ExtraBold.ttf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: alternativa;
+  src: url('../font/fonts/static/Oxanium-ExtraLight.ttf');
+  font-weight: lighter;
+}
+* {
+  background-color: black;
+  color: white;
+  font-family: monospace, sans-serif, 'Times New Roman';
+}
+.topo #seta{
+  margin-left: 1300px;
+  margin-right: 10px;
+  width: auto;
+  background-color: white;
+  border-radius: 50%;
+  border: 5px white solid;
+}
+#um {
+  font-family: alternativa;
+}
+#dois{
+  font-family: alternativa;
+  font-weight: bold;
+}
+#tres{
+  font-family: gamer;
+}
+#quatro{
+  font-family: 'Raleway';
+}
+#cinco{
+  font-family: 'Lobster', cursive;
+}
+code {
+  background-color: chartreuse;
+  color: black;
+  padding: 0 2px;
+}
+#tamanho{font-size: 35px;}
+#xx-small{font-size: xx-small;}
+#x-small{font-size: x-small;}
+#small{font-size: small;}
+#medium{font-size: medium;}
+#large{font-size: large;}
+#x-large{font-size: x-large;}
+#xx-large{font-size: xx-large;}
+div{
+  font-size: 20px;
+}
+div p{
+  font-size: larger /* or smaller*/;
+}
+#italic{
+  font-style: italic;
+}
+#oblique {
+  font-style: oblique;
+}
+#espessura{
+  font-weight: 600;
+}
+#bold{
+  font-weight: bold;
+}
+#bolder-lighter {
+  font-size: medium;
+  font-weight: normal;
+}
+#p-bolder-lighter {
+  font-size: medium;
+  font-weight: bolder;
+}
+#exemplo{
+  font-variant: small-caps;
+}
+#ultra-condensed{
+  font-family: sans-serif;
+  font-stretch: ultra-condensed;
+}
+#extra-condensed{
+  font-family: sans-serif;
+  font-stretch: extra-condensed;
+}
+#semi-condensed{
+  font-family: sans-serif;
+  font-stretch: semi-condensed;
+}
+#fs-normal{
+  font-family: sans-serif;
+  font-stretch: normal;
+}
+#semi-expanded{
+  font-family: sans-serif;
+  font-stretch: semi-expanded;
+}
+#expanded{
+  font-family: sans-serif;
+  font-stretch: expanded;
+}
+#extra-expanded{
+  font-family: sans-serif;
+  font-stretch: extra-expanded;
+}
+#ultra-expanded{
+  font-family: sans-serif;
+  font-stretch: ultra-expanded;
+}
+#line-height{
+  font-family: sans-serif;
+  line-height: 2;
+}
+#lista > li {
+  background-color: chartreuse;
+  color: white;
+  padding: 0 2px;
+  font-weight: bold;
+}
+#font{
+  font: italic small-caps bold 24px/2 gamer, sans-serif;
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Textos</title>
+  <style>
+    *{
+      background-color: black;
+      color: white;
+      font-family: sans-serif;
+    }
+    .topo #seta{
+      margin-left: 1300px;
+      margin-right: 10px;
+      width: auto;
+      background-color: white;
+      border-radius: 50%;
+      border: 5px white solid;
+    }
+    code{
+      background-color: greenyellow;
+      color: black;
+      padding: 3px 3px;
+      font-weight: bold;
+    }
+    #capitalize{
+      text-transform: capitalize;
+    }
+    #uppercase{
+      text-transform: uppercase;
+    }
+    #lowercase{
+      text-transform: lowercase;
+    }
+    .text-align{
+      padding: 10px;
+      background-color: lightgrey;
+      color: black;
+      text-align: center;
+    }
+    #text-align{
+      width: 370px;
+      border: 1px solid white;
+      text-align: right /*justify*/;
+    }
+    #paragrafo{
+      text-decoration: overline;
+      text-decoration-style: double;
+      text-decoration-color: greenyellow;
+    }
+    #text-decoration{
+      text-decoration: underline;
+      text-decoration-style: /*dotted dashed*/ wavy;
+      text-decoration-thickness: 5px;
+    }
+    #link{
+      text-decoration: none;
+    }
+    #text-indent{
+      text-indent: 20px;
+    }
+    #text-indent2{
+      text-indent: -5px;
+    }
+    #letter{
+      letter-spacing: 3px;
+    }
+    #word{
+      word-spacing: 5px;
+    }
+    span{
+      background-color: blueviolet;
+    }
+    .exemplo{
+      width: 200px;
+      padding: 5px;
+      background-color: azure;
+      color: black;
+    }
+    .exemplo2{
+      width: 100px;
+      background-color: purple;
+      color: white;
+    }
+    .exemplo3{
+      width: 200px;
+      color: white;
+      white-space: nowrap;
+      background-color: purple;
+      overflow: hidden;
+    }
+    #nowrap{
+      white-space: nowrap;
+    }
+    #pre{
+      white-space: pre;
+    }
+    #pre-line{
+      white-space: pre-line;
+    }
+    #pre-wrap{
+      white-space: pre-wrap;
+    }
+    #break-spaces{
+      white-space: break-spaces;
+    }
+    #break-word{
+      word-wrap: break-word;
+    }
+    #break-all{
+      word-break: break-all;
+    }
+    #keep-all{
+      word-break: keep-all;
+    }
+    #horizontal-tb {
+      writing-mode: horizontal-tb;
+    }
+    #vertical-rl {
+      white-space: break-spaces;
+      writing-mode: vertical-rl;
+    }
+    #vertical-lr {
+      white-space: break-spaces;
+      writing-mode: vertical-lr;
+    }
+    #clip{
+      text-overflow: clip;
+    }
+    #ellipsis{
+      text-overflow: ellipsis;
+    }
+    #string{
+      text-overflow: 'ver mais >'; /*funciona atualmente somente no firefox*/
+    }
+  </style>
+</head>
+<body>
+  <h2 id="index">Propriedade <code>text-transform</code></h2>
+  <code>text-transform: capitalize;</code>
+  <p id="capitalize">É responsável por DEFINIFIR quais caracteres vão estar em Maiúsculo, minúsculo, etc.</p>
+  <code>text-transform: uppercase;</code>
+  <p id="uppercase">É responsável por DEFINIFIR quais caracteres vão estar em Maiúsculo, minúsculo, etc.</p>
+  <code>text-transform: lowercase;</code>
+  <p id="lowercase">É responsável por DEFINIFIR quais caracteres vão estar em Maiúsculo, minúsculo, etc.</p>
+  <hr>
+  <h2>Propriedade <code>text-align</code></h2>
+  <p class="text-align">Essa propriedade é responsável por alinhar o texto no elemento.</p>
+  <p class="text-align" id="text-align">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia odit fugit amet error temporibus cumque vero, eveniet dignissimos iste inventore nostrum ipsa expedita magnam ipsam similique laborum ex! Repellat, odio!</p>
+  <hr>
+  <h2 id="text-decoration">Propriedade <code>text-decoration</code></h2>
+  <p id="paragrafo">Adiciona ou remove linhas no nosso texto; sejam linhas em cima, no meio ou embaixo.</p>
+  <p>
+    É uma propriedade abreviada de:
+    <ul>
+      <li><code>text-decoration-line</code></li>
+      <li><code>text-decoration-style</code></li>
+      <li><code>text-decoration-color</code></li>
+      <li><code>text-decoration-thickness</code></li>
+    </ul>
+  </p>
+  <a id="link" href="#">Link de Exemplo</a>
+  <hr>
+  <h2>Propriedade <code>text-indent</code></h2>
+  <p>Define o recuo da primeira linha do nosso texto. Exemplo:</p>
+  <p id="text-indent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque cumque, optio reiciendis est beatae magnam quasi quo. Provident nemo nobis quaerat, iure totam dolores, soluta sunt earum est magni illum!</p>
+  <p id="text-indent2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque cumque, optio reiciendis est beatae magnam quasi quo. Provident nemo nobis quaerat, iure totam dolores, soluta sunt earum est magni illum!</p>
+  <hr>
+  <h2>Propriedade <code>letter-spacing</code></h2>
+  <p>Adiciona um espaçamento entre cada CARACTERE do seu texto. Como o nome já diz, espaçamento entre as letras.</p>
+  <p>Exemplo:</p>
+  <p id="letter">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga impedit autem at fugit, id harum laborum labore odio atque vel corporis delectus corrupti debitis, ipsam natus obcaecati sapiente aperiam nostrum?</p>
+  <hr>
+  <h2>Propriedade <code>word-spacing</code></h2>
+  <p>Adiciona um espaçamento entre cada PALAVRA do seu texto. Como o nome já diz, espaçamento entre as palavras.</p>
+  <p>Exemplo:</p>
+  <p id="word">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga impedit autem at fugit, id harum laborum labore odio atque vel corporis delectus corrupti debitis, ipsam natus obcaecati sapiente aperiam nostrum?</p>
+  <hr>
+
+  <h2>Propriedade <code>white-space</code></h2>
+  <p>Define como os espaços em branco de um determinado texto são tratados.</p>
+  <p>Exemplo:</p>
+
+  <code>white-space: nowrap;</code>
+  <p class="exemplo" id="nowrap"><span>Lorem             ipsum dolor sit amet consectetur,
+    adipisicing elit.                                             Fuga impedit autem at fugit, id harum laborum labore odio atque vel corporis delectus corrupti debitis,
+  ipsam natus obcaecati 
+  sapiente aperiam                 nostrum?</span></p>
+
+  <code>white-space: pre;</code>
+  <p class="exemplo" id="pre"><span>
+  Lorem             ipsum dolor sit amet consectetur,
+    adipisicing elit.                                             Fuga impedit autem at fugit, id harum laborum labore odio atque vel corporis delectus corrupti debitis,
+  ipsam natus obcaecati 
+
+  sapiente aperiam                 nostrum?</span></p>
+
+  <code>white-space: pre-line;</code>
+  <p class="exemplo" id="pre-line"><span>
+    Lorem             ipsum dolor sit amet consectetur,
+    adipisicing elit.                                             Fuga impedit autem at fugit, id harum laborum labore odio atque vel corporis delectus corrupti debitis,
+  ipsam natus obcaecati 
+
+  sapiente aperiam                 nostrum?
+ </span></p>
+
+  <code>white-space: pre-wrap;</code>
+  <p class="exemplo" id="pre-wrap"><span>
+    Lorem             ipsum dolor sit amet consectetur,
+    adipisicing elit.                                               Fuga impedit autem at fugit, id harum laborum labore odio atque vel corporis delectus corrupti debitis,
+  ipsam natus obcaecati             
+
+  sapiente aperiam                     nostrum?               
+                  
+                  </span></p>
+
+  <code>white-space: break-spaces;</code>
+  <p class="exemplo" id="break-spaces"><span>Lorem             ipsum dolor sit amet consectetur,
+    adipisicing elit.                                             Fuga impedit autem at fugit, id harum laborum labore odio atque vel corporis delectus corrupti debitis,
+  ipsam natus obcaecati 
+  sapiente aperiam                 nostrum?           
+                            </span></p>
+  <hr>
+
+  <h2>Propriedade <code>word-wrap</code></h2>
+  <p>Define, caso uma palavra seja muito grande para caber em uma linha, se ela será quebrada em qualquer caractere para que uma parte dela fique na linha e o restante na próxima, ou se não, toda apalvra deve ficar na mesma linha e ultrapassar os limites que definimos para o elemento.</p>
+  
+  <p>Exemplo:</p>
+  
+  <code>word-wrap: normal;</code>
+  <p id="normal" class="exemplo2">Trilha de CSS TrilhaDeCSSTudoJunto Trilha de CSS</p>
+  
+  <code>word-wrap: break-word;</code>
+  <p id="break-word" class="exemplo2">Trilha de CSS TrilhaDeCSSTudoJunto Trilha de CSS</p>
+  <hr>
+  <h2>Propriedade <code>word-break</code></h2>
+  <p>Define quando o texto deve ter uma quebra de linha.</p>
+
+  <code>word-break: normal;</code>
+  <p class="exemplo2">Trilha de CSS TrilhaDeCSSTudoJunto Trilha de CSS</p>
+
+  <code>word-wrap: break-all;</code>
+  <p id="break-all" class="exemplo2">Trilha de CSS TrilhaDeCSSTudoJunto Trilha de CSS</p>
+
+  <code>word-wrap: keep-all;</code>
+  <p id="keep-all" class="exemplo2">Trilha de CSS TrilhaDeCSSTudoJunto Trilha de CSS 歡迎來到流氓俱樂部我們都是垃圾</p>
+
+  <hr>
+  <h2>Propriedade <code>writing-mode</code></h2>
+  <p>Define a orientação do texto (vetical ou horizontal).</p>
+
+  <code>writing-mode: horizontal-tb;</code>
+  <p id="horizontal-tb" class="exemplo2">There's a hell belive me, I've seen it (and there's a heaven, let's keep it a secret)</p>
+
+  <code>writing-mode: vertical-rl;</code>
+  <p id="vertical-rl" class="exemplo2"> There's a hell belive me,
+ I've seen it (and there's a heaven, let's keep it a secret)</p>
+
+  <code>writing-mode: vertical-rl;</code>
+  <p id="vertical-lr" class="exemplo2"> There's a hell belive me,
+ I've seen it (and there's a heaven, let's keep it a secret)</p>
+
+  <h2>Propriedade <code>text-overflow</code></h2>
+  <p>Define a orientação do texto (vertical ou horizontal)</p>
+
+  <code>text-overflow: clip;</code>
+  <p id="clip" class="exemplo3">There's a hell belive me, I've seen it (and there's a heaven, let's keep it a secret)</p>
+
+  <code>text-overflow: ellipsis;</code>
+  <p id="ellipsis" class="exemplo3">There's a hell belive me, I've seen it (and there's a heaven, let's keep it a secret)</p>
+
+  <code>text-overflow: string;</code>
+  <p id="string" class="exemplo3">There's a hell belive me, I've seen it (and there's a heaven, let's keep it a secret)</p>
+
+  <hr>
+  <a href="index.html#index" target="_self" rel="noopener">Início</a>
+  <a class="topo" href="#topo"><img id="seta" title="Topo" src="https://cdn-icons-png.flaticon.com/24/130/130906.png" alt="seta para o topo"></a>
+</body>
+</html>

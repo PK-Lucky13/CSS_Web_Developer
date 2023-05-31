@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Imagens</title>
+  <style>
+    * {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    #contain{
+      object-fit: contain;
+    }
+    #cover{
+      object-fit: cover;
+    }
+    #none{
+      object-fit: none;
+    }
+    #scale-down{
+      object-fit: scale-down;
+    }
+    #object-position{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 30px -40px;
+    }
+    #object-fit{
+      width: 200px;
+      height: 300px;
+      margin-top: 5px;
+      border: 5px solid black;
+    }
+    .topo #seta{
+      margin-left: 1330px;
+      width: auto;
+    }
+  </style>
+</head>
+<body>
+    <h2 id="topo">Propriedade <i>object-fit</i></h2>
+    <code>object-fit: fill; (padrão)</code>
+    <div id="object-fit">
+      <img src="https://livecoins.com.br/wp-content/uploads/2023/04/bitcoin-bueiro.jpg.webp" alt="" id="fill">
+    </div>
+    <br>
+    <code>object-fit: contain;</code>
+    <div id="object-fit">
+      <img src="https://livecoins.com.br/wp-content/uploads/2023/04/bitcoin-bueiro.jpg.webp" alt="" id="contain">
+    </div>
+    <br>
+    <code>object-fit: cover;</code>
+    <div id="object-fit">
+      <img src="https://livecoins.com.br/wp-content/uploads/2023/04/bitcoin-bueiro.jpg.webp" alt="" id="cover">
+    </div>
+    <br>
+    <code>object-fit: none;</code>
+    <div id="object-fit">
+      <img src="https://livecoins.com.br/wp-content/uploads/2023/04/bitcoin-bueiro.jpg.webp" alt="" id="none">
+    </div>
+    <br>
+    <code>object-fit: scale-down;</code>
+    <div id="object-fit">
+      <img src="https://livecoins.com.br/wp-content/uploads/2023/04/bitcoin-bueiro.jpg.webp" alt="" id="scale-down">
+    </div>
+    <h2>Propriedade <i>object-position</i></h2>
+    <code>object-position: [Eixo Horizontal] [Eixo Vertical] ;</code>
+    <div id="object-fit">
+      <img src="https://livecoins.com.br/wp-content/uploads/2023/04/bitcoin-bueiro.jpg.webp" alt="" id="object-position">
+    </div>
+  <hr>
+  <h2>Alterando Fundo dos Elementos</h2>
+
+  <code>background-size: cover;</code>
+  <div class="exemplo-img-big-cover"></div><br>
+  <code>background-size: contain;</code>
+  <div class="exemplo-img-big-contain"></div><br>
+  <code>background-size: px ou %;</code>
+  <div class="exemplo-img-big-tamanho"></div><br>
+  <code>background-size: [altura] [largura];</code>
+  <div class="exemplo-x-y"></div><br>
+  <code>background-repeat: repeat (auto);</code>
+  <div class="exemplo-img-small-repeat"></div><br>
+  <code>background-repeat: repeat-x;</code>
+  <p>A imagem continua ocupando a altura e largura definidas para o elemento (div), porém ela se repetirá somente no eixo x (horizontal) do elemento.</p>
+  <div class="exemplo-img-small-repeat-x"></div><br>
+  <code>background-repeat: repeat-y;</code>
+  <p>A imagem continua ocupando a altura e largura definidas para o elemento (div), porém ela se repetirá somente no eixo y (vertical) do elemento.</p>
+  <div class="exemplo-img-small-repeat-y"></div><br>
+  <code>background-repeat: space;</code>
+  <p>Adciona espaço entre as imagens, repetindo elas nos eixos verticais e horizontais de modo que a visualização das mesmas não corte nenhuma imagem, ou seja, coloca um espaço entre as imagens sem cortar nenhuma delas.</p>
+  <div class="exemplo-img-small-repeat-space"></div><br>
+  <code>background-repeat: round;</code>
+  <p>Repetido quantas vezes couber na área de posicionamento do plano de fundo. Se não couber um número inteiro de vezes, é redimensionado para que caiba.</p>
+  <div class="exemplo-img-small-repeat-round"></div><br>
+  <code>background-repeat: no-repeat;</code>
+  <div class="exemplo-img-small-no-repeat"></div><br>
+  <code>background-repeat: [valor eixo x] [valor eixo y];</code>
+  <div class="exemplo-img-small-repeat-qntd"></div><br>
+
+  <h3>Camadas (imagem sobre imagem)</h3>
+  <code>background-size: [imagem 1 (valor)] [imagem 2 (valor)];</code>
+  <div class="exemplo-camadas"></div><br>
+
+  <h3>Efeito gradiente</h3>
+  <div class="gradiente"></div><br>
+  <div class="gradiente-1"></div><br>
+  <div class="gradiente-2"></div><br>
+
+  <h2>Posicionamento das Imagens de Fundo</h2>
+
+  <h3>Background Position</h3>
+  <code>background-position: center-top-right-bottom-left / px / % / [horizontal] [vertical] / ex: center top (centraliza no topo);</code>
+  <div class="exemplo"></div><br>
+  <code>background-position: [cantos relativos] bottom 10px right 5px;</code>
+  <div class="exemplo-2"></div><br>
+
+  <h3>Background Attachment</h3>
+
+  <code>background-attachment: fixed;</code>
+  <div class="exemplo-fixed">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci maiores, esse quaerat alias at explicabo doloremque dolorem, maxime eveniet unde omnis natus dicta dolore atque praesentium non enim illum qui. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda doloremque eligendi id consequuntur tempora ut itaque pariatur minus iste porro asperiores perferendis beatae, ipsa, nihil, amet eum. Doloribus, blanditiis neque! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore ad, in iste rem suscipit ea ex pariatur! Soluta sapiente quis atque in ea odit, molestiae natus iure tempora necessitatibus veniam.</div><br>
+  <code>background-attachment: scroll;</code>
+  <div class="exemplo-scroll">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci maiores, esse quaerat alias at explicabo doloremque dolorem, maxime eveniet unde omnis natus dicta dolore atque praesentium non enim illum qui. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda doloremque eligendi id consequuntur tempora ut itaque pariatur minus iste porro asperiores perferendis beatae, ipsa, nihil, amet eum. Doloribus, blanditiis neque! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore ad, in iste rem suscipit ea ex pariatur! Soluta sapiente quis atque in ea odit, molestiae natus iure tempora necessitatibus veniam.</div><br>
+  <code>background-attachment: local;</code>
+  <div class="exemplo-local">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci maiores, esse quaerat alias at explicabo doloremque dolorem, maxime eveniet unde omnis natus dicta dolore atque praesentium non enim illum qui. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda doloremque eligendi id consequuntur tempora ut itaque pariatur minus iste porro asperiores perferendis beatae, ipsa, nihil, amet eum. Doloribus, blanditiis neque! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore ad, in iste rem suscipit ea ex pariatur! Soluta sapiente quis atque in ea odit, molestiae natus iure tempora necessitatibus veniam.</div><br>
+
+  <h3>Background Origin</h3>
+
+  <code>background-origin: padding-box;</code>
+  <div class="exemplo-padding-box"></div><br>
+  <code>background-origin: border-box;</code>
+  <div class="exemplo-border-box"></div><br>
+  <code>background-origin: content-box;</code>
+  <div class="exemplo-content-box"></div><br>
+
+  <h3>Background Clip</h3>
+
+  <code>background-clip: padding-box;</code>
+  <div id="padding-box" class="exemplo-txt">TRILHA DE CSS</div><br>
+  <code>background-clip: border-box;</code>
+  <div id="border-box" class="exemplo-txt">TRILHA DE CSS</div><br>
+  <code>background-clip: content-box;</code>
+  <div id="content-box" class="exemplo-txt">TRILHA DE CSS</div><br>
+  <code>background-clip: text;</code>
+  <div id="texto" class="exemplo-txt">TRILHA DE CSS</div><br>
+
+  <code>background-clip: padding-box;</code>
+  <div id="padding-box-img" class="exemplo-txt-img">TRILHA DE CSS</div><br>
+  <code>background-clip: border-box;</code>
+  <div id="border-box-img" class="exemplo-txt-img">TRILHA DE CSS</div><br>
+  <code>background-clip: content-box;</code>
+  <div id="content-box-img" class="exemplo-txt-img">TRILHA DE CSS</div><br>
+  <code>background-clip: text;</code>
+  <div id="texto-img" class="exemplo-txt-img">TRILHA DE CSS</div><br>
+
+  <h3>Mesclagem</h3>
+  <code>background-blend-mode</code>
+  <div class="exemplo-mesclagem">TRILHA DE CSS</div>
+
+  <h3>Propriedade Background</h3>
+  <div class="exemplo-background">TRILHA <br> DE CSS</div>
+
+  <hr>
+  <a href="index.html#index" target="_self" rel="noopener">Início</a>
+  <a class="topo" href="#topo"><img id="seta" title="Topo" src="https://cdn-icons-png.flaticon.com/24/130/130906.png" alt="seta para o topo"></a>
+</body>
+</html>

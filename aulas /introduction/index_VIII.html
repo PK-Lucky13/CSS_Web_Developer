@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style_IV.css">
+  <title>Unidades de Medidas</title>
+</head>
+<body>
+  <h1 id="topo">Unidades de Medidas Absolutas</h1>
+  <p>Classificação de tipos numéricos de valores
+    <br><br>
+    <ul id="altura-linha">
+      <li><code>&lt;integer></code> Valores inteiros, positivos e negativos (ex.: 10115; -95)</li>
+      <li><code>&lt;number></code> Valores decimais (0.355; 135; 9.5)</li>
+      <li><code>&lt;percentage></code> Valores que representam uma fração de algum outro valor (50%)</li><br>
+      <li><code>&lt;dimension></code> <ins>Valores numéricos com unidade de medida atrelada:</ins>
+      <ul id="altura-linha">
+        <li><code>&lt;lenght></code> Representam distência (px; em; vw; in)</li>
+        <li><code>&lt;angle></code> Representam ângulos (deg; rad; grad; turn)</li>
+        <li><code>&lt;time></code> Expressam tempo (s; ms)</li>
+        <li><code>&lt;resolutions></code> Descrevem resoluções para dispositivos (dpi; dpc; dppx)</li>
+      </ul>
+      </li>
+    </ul>
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">UNIDADES DE MEDIDAS ABSOLUTAS</th>
+      </tr>
+      <tr>
+        <th> Unidade </th>
+        <th> Nome </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> cm </td>
+        <td> Centímetros </td>
+      </tr>
+      <tr>
+        <td> mm </td>
+        <td> Milímetros </td>
+      </tr>
+      <tr>
+        <td> q </td>
+        <td> Quarto de Milímetro </td>
+      </tr>
+      <tr>
+        <td> in </td>
+        <td> polegadas </td>
+      </tr>
+      <tr>
+        <td> pc </td>
+        <td> Paica </td>
+      </tr>
+      <tr>
+        <td> pt </td>
+        <td> Pontos </td>
+      </tr>
+      <tr>
+        <td> px </td>
+        <td> Pixels </td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <h1>Unidades de Medidas Relativas</h1>
+  <p>As unidades relativas são calculadas com base em unidades já conhecidas de um <b>outro elemento</b>,
+  o que faz com que o resultado possa <b>variar</b> de acordo com o valor da propriedade do elemento no qual estamos nos baseando.
+  </p>
+  <div class="tipos"><p id="texto">%</p></div>
+  <div class="tipos"><p id="texto">em</p></div>
+  <div class="tipos"><p id="texto">rem</p></div>
+  <div class="tipos"><p id="texto">vw</p></div>
+  <div class="tipos"><p id="texto">vh</p></div>
+  <div class="tipos"><p id="texto">...</p></div>
+  <br><hr>
+  <h2>Porcentagem</h2>
+  <p>A porcentagem é uma unidade de medida que irá utilizar como <b>referência</b> o <i>elemento pai</i> para se basear, podendo alterar os resultados de acordo com o lugar em que está inserido.</p>
+  <div id="background"><p id="p-background"><-----------------------------------------------------------------------------------------------------------------></p>
+    <div id="quadrado">
+      <div id="quadradinho">
+      <br><p id="p-quadradinho">width: 50%;<br><p id="p2-quadradinho">250px</p></p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <h3>Pixel vs Porcentagem</h3>
+  <div class="exemplo-pixel">width: 300px;</div>
+  <div class="exemplo-porcentagem">width: 50%;</div><br><hr>
+  <p>O elemento pai possui 500px de largura e um font-size de 40px.</p>
+  <div id="background-2">
+  <div id="elemento-pai">
+      <div class="exemplo-pixel">
+        width: 300px;
+      </div>
+      <div class="exemplo-porcentagem" style="font-size: 50%;">
+        width: 50%;
+      </div>
+    </div>
+  </div>
+  <br><hr><br>
+  <h2>Unidades Relativas: <code>em e rem</code></h2>
+  <h3>Unidade de Medida <code>em</code></h3>
+  <p>A unidade de medida <code>em</code>, quando utilizada para <b style="background-color: white; color: black;"> definir o tamanho de fonte de um elemento</b>, vai utilizar como referência o valor da propriedade <code>font-size</code> do elemento pai no qual está inserido.</p>
+  <p>Caso seja utilizado a unidade <code>em</code> para outras propriedades que não sejam o tamanho da fonte do elemento, o resultado será em relação ao tamanho da fonte do próprio elemento em que está sendo definida a propriedade.</p>
+  <ul class="fieldset">
+    <li>Elemento 01 | font-size: 20px;
+      <ul class="fieldset" id="fieldset1">
+        <li>Elemento 02 | font-size: 2em; (40px)
+          <ul class="fieldset" id="fieldset2">
+            <li>
+              Elemento 03 <br> 
+              <br>font-size: 2em; (80px) <br> width: 2em (80px)
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <p>Vejamos alguns exemplos:</p>
+  <p class="p-em" style="font-size: 1em;">font-size: 1em = 16px;</p>
+  <p class="p-em" style="font-size: 2em;">font-size: 2em = 32px;</p>
+  <p class="p-em" style="font-size: 3em;">font-size: 3em = 48px;</p><br>
+  <div class="exemplo-em-1" style="font-size: 20px;color: black;">font-size: 20px;
+    <div class="exemplo-em-2" style="font-size: 2em;color: black;">font-size: 2em = 40px;
+      <div class="exemplo-em-3" style="font-size: 2em;color: black;">font-size: 2em = 80px;</div>
+    </div>
+  </div>
+  <br>
+  <div class="exemplo-em-1" style="font-size: 20px;color: black;">font-size: 20px;
+    <div class="exemplo-em-2" style="font-size: 2em;color: black;">font-size: 2em = 40px;
+      <div class="exemplo-em-3-1" style="font-size: 2em;color: black;">font-size: 2em = 80px;<br>width: 10em = 800px;</div>
+    </div>
+  </div>
+  <br>
+  <div class="exemplo-em-2" style="font-size: 30px; Width: 10em; color: black;">
+    font-size: 30px; <br>
+    width: 10em = 300px;
+  </div>
+  <br>
+  <h3>Unidade de Medida <code>rem</code></h3>
+  <p>O <code>rem (root em)</code> tem um funcionamento semelhante à unidade de medida <code>em</code>, porém enquanto o <code>em</code> utiliza o <b>elemento pai</b> como <i>referência</i>, o <code>rem</code> está <b>relacionado ao tamanho da fonte</b> do <i>elemento raíz</i>, chamado <code>root</code>, que no caso, é a tag <code>html</code></p>
+  <ul class="html">
+    <li style="color:greenyellow;">&lt;html> 
+      <span style="margin-left: 575px; background-color: greenyellow; color:black; border-radius: 100px/100px; padding: 5px;"> 
+        font-size: 16px; <span style=" margin-right: -10px; font-size: 15px ;border:2px solid greenyellow;background-color: white; color:black; padding: 3px; border-radius:100px/100px;">
+          16px</span></span> 
+      <ul class="html" id="elemento1">
+        <li>Elemento 1<span style="margin-left:450px; background-color: greenyellow; color:black; border-radius: 100px/100px; padding: 5px;">
+          font-size: 20px; <span style=" margin-right: -10px; font-size: 15px ;border:2px solid greenyellow;background-color: black; color:white; padding: 3px; border-radius:100px/100px;"> 20px</span></span>
+          <ul class="html" id="elemento2">
+            <li> Elemento 2 <span style="margin-left:347px; background-color: greenyellow; color:black; border-radius: 100px/100px; padding: 5px;">
+             2rem; <span style=" margin-right: -10px; font-size: 15px ;border:2px solid greenyellow;background-color: white; color:black; padding: 3px; border-radius:100px/100px;"> 80px </span></span>
+             <ul class="html" id="elemento1">
+              <li>
+                <li>Elemento 3
+                  <span style="margin-left:188px; background-color: greenyellow; color:black; border-radius: 100px/100px; padding: 5px;">
+                  font-size: 2rem;
+                  <span style=" margin-right: -10px; font-size: 15px ;border:2px solid greenyellow;background-color: black; color:white; padding: 3px; border-radius:100px/100px;">
+                     32px
+                    </span>
+                  </span>
+                  <br><br><span style="margin-left:300px; background-color: greenyellow; color:black; border-radius: 100px/100px; padding: 5px;">
+                    width: 2rem;
+                    <span style=" margin-right: -10px; font-size: 15px ;border:2px solid greenyellow;background-color: black; color:white; padding: 3px; border-radius:100px/100px;">
+                      32px
+                    </span>
+                  </span>
+              </li>
+             </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <p>Vejamos alguns exemplos:</p>
+
+  <p class="p-rem" style="font-size: 1rem;">font-size: 1rem = 16px;</p>
+  <p class="p-rem" style="font-size: 2rem;">font-size: 2rem = 32px;</p>
+  <p class="p-rem" style="font-size: 3rem;">font-size: 3rem = 48px;</p><br>
+  <div class="exemplo-rem-1" style="font-size: 20px; color: black;">font-size: 20px;
+    <div class="exemplo-rem-2" style="font-size: 2rem; color: black;">font-size: 2rem = 32px;
+      <div class="exemplo-rem-3" style="font-size: 3rem; color: black;">font-size: 3em = 48px;</div>
+    </div>
+  </div>
+  <br>
+  <div class="exemplo-rem-1" style="font-size: 20px; color: black;">font-size: 20px;
+    <div class="exemplo-rem-2" style="font-size: 2rem; color: black;">font-size: 2rem = 32px;
+      <div class="exemplo-rem-3-1" style="font-size: 2rem; color: black;">font-size: 2rem = 32px;</div>
+    </div>
+  </div>
+  <br>
+  <div class="exemplo-rem-2" style="font-size: 30px; Width: 10rem; color: black;">
+    font-size: 30px; <br>
+    width: 10rem = 160px;
+  </div>
+  <br>
+  <h2>Diferenças Entre: <code>em e rem</code></h2>
+  <p style="font-size: 2rem;">
+    font-size: 2rem;
+  </p>
+  <p style="font-size: 2em;">
+    font-size: 2em;
+  </p>
+  <p style="font-size: 200%;">
+    font-size: 200%;
+  </p>
+  <br>
+  <div class="exemplo-rem-1" style="font-size: 2rem; color: black;">font-size: 2rem;
+    <div class="exemplo-em-2" style="font-size: 2em;color: black;">font-size: 2em;
+      <div class="exemplo-3" style="font-size: 200%;color: black;">font-size: 200%;</div>
+    </div>
+  </div>
+  <br>
+  <div class="exemplo-rem-1" style="font-size: 2rem; color: black;">
+    font-size: 2rem;
+    <div class="exemplo-em-2" style="font-size: 2em; color: black;">
+      font-size: 2em;
+    </div>
+    <div class="exemplo-3" style="font-size: 200%; color: black;">
+      font-size: 200%;
+    </div>
+    <div class="exemplo-rem-2" style="font-size: 2rem; color: black;">
+      font-size: 2rem;
+    </div>
+  </div>
+  <br><hr><br>
+  <h2>Vantagens de Utilizar as Unidades de Medidas <code>em e rem</code></h2>
+  <p>A utilização das unidades <code>em e rem</code> traz flexibilidade aos nossos projetos e a capacidade de dimensionar os elemtnos das nossas páginas web, resultando em designs:</p>
+  <ul>
+    <li style="font-weight: bold; width: 22%; background-color: greenyellow; border-radius: 100px/100px; padding: 3px;"><span style="color:black;">Fácil manutenção</span></li><br>
+    <li style="font-weight: bold; width: 22%; background-color: greenyellow; border-radius: 100px/100px; padding: 3px; "><span style="color:black;">Responsívos</span></li><br>
+    <li style="font-weight: bold; width: 22%; background-color: greenyellow; border-radius: 100px/100px; padding: 3px;"><span style="color:black;">Controle de escala pelos navegadores</span></li>
+  </ul>
+  <h2>Configuração de Fontes pelos Navegadores</h2>
+  <h3>O elemento raíz <code>&lt;html></code> herda o valor padrão do tamanho de fontes dos navegadores e esse tamanho pode ser configurado nas preferências dos browsers.</h3>
+  <p>Utilizando as unidades de medidas <code>em e rem</code>, facilmente o texto do nosso projeto pode ser escalado de acordo com as configurações que os usuários predefinam em seus navegadores.</p>
+
+  <h2>Uso das Medidas <code>em e rem</code></h2>
+  <p>Quando e por que utilizar a unidade de medida <code>rem</code>?</p>
+  <ul>
+    <li style="font-weight: bold; width: 22%; background-color: greenyellow; border-radius: 100px/100px; padding: 3px;"><span style="color:black;">Tamanhos consistentes, sem herança</span></li><br>
+    <li style="font-weight: bold; width: 22%; background-color: greenyellow; border-radius: 100px/100px; padding: 3px; "><span style="color:black;">Melhor experiência do usuário</span></li><br>
+  </ul>
+  <p>Quando e por que utilizar a unidade de medida <code>em</code>?</p>
+  <ul>
+    <li style="font-weight: bold; width: 22%; background-color: greenyellow; border-radius: 100px/100px; padding: 3px;"><span style="color:black;">Contexto dos elementos</span></li>
+  </ul>
+  <h2>Unidades Relativas <code>Viewport Units</code></h2>
+  <p>Viewport é a área visível de uma página web, podendo variar de dispositivo para dispositivo. As unidades de medida viewport, vão ser calculadas em relação ao tamanho da área em que o usuário está vendo sua página.</p>
+  <img src="https://i.stack.imgur.com/RFNIJ.png"><br>
+  <code style="font-size: 20px;">vw: viewpor width</code>
+  <p>Define a largura da área de exibição.
+    Ex.: <br><br> <code>width: 10vw</code><br><br><br>
+  </p>
+  <code style="font-size: 20px;">vh: viewpor height</code>
+  <p>Define a altura da área de exibição.
+    Ex.: <br><br> <code>width: 10vh</code>
+  </p><br>
+  <h3>Unidade de Medida <code>vw - vh - vmin - vmax</code></h3>
+  <div class="exemplo-1" style="width: 50%;">
+    width: 50%;
+  </div>
+  <div class="exemplo-2" style="width: 50vw;">
+    width: 50vw;
+  </div>
+  <div class="exemplo-3" style="height: 50vh;">
+   height: 50vh;
+  </div>
+  <hr>
+  <div class="borda" style="width: 300px;">
+    <div class="exemplo-1" style="width: 50%;">
+      width: 50%;
+    </div>
+    <div class="exemplo-2" style="width: 50vw;">
+      width: 50vw;
+    </div>
+    <div class="exemplo-3" style="height: 50vh;">
+      height: 50vh;
+    </div>
+  </div>
+  <hr>
+  <div class="exemplo-1" style="width: 10vmin;">
+    width: 10vmin;
+  </div>
+  <div class="exemplo-2" style="width: 10vmax;">
+    width: 10vmax;
+  </div>
+  <br><hr><br>
+  <a href="index.html#index" target="_self" rel="noopener">Início</a>
+  <a class="topo" href="#topo"><img id="seta" title="Topo" src="https://cdn-icons-png.flaticon.com/24/130/130906.png" alt="seta para o topo"></a>
+</body>
+</html>

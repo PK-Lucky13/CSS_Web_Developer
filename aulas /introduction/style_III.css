@@ -1,0 +1,16 @@
+@import url('./reset.css');
+
+.topo #seta{
+  margin-left: 1300px;
+  margin-right: 10px;
+  width: auto;
+  background-color: white;
+  border-radius: 50%;
+  border: 5px white solid;
+}
+code{
+  background-color: greenyellow;
+  color: black;
+  padding: 3px 3px;
+  font-weight: bold;
+}

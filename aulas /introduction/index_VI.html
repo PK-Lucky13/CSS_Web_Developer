@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sombras</title>
+  <style>
+    body{
+      background-color: black;
+      color: white;
+      font-family: sans-serif;
+    }
+    .topo #seta{
+      margin-left: 1300px;
+      margin-right: 10px;
+      width: auto;
+      background-color: white;
+      border-radius: 50%;
+      border: 5px white solid;
+    }
+    code{
+      background-color: greenyellow;
+      color: black;
+      padding: 3px 3px;
+      font-weight: bold;
+    }
+    #box-shadow{
+      width: 200px;
+      height: 200px;
+      border: 10px solid #da8300;
+      margin: 20px auto;
+      background: orange;
+      box-shadow: inset 30px 30px 15px -5px  black, 30px 30px 15px -5px  rgb(107, 85, 44);
+    }
+    #planetas {
+      width: 500px;
+      margin: 20px 0 50px 50px;
+      filter: drop-shadow(10px 10px 5px lightgray);
+      box-shadow: 30px 30px 15px -5px  black;
+    }
+    #planeta{
+      width: 500px;
+      margin: 20px 0 0 290px;
+      filter: drop-shadow(10px 10px 5px lightgray);
+    }
+    #h3-1 {
+      color: orange;
+      text-shadow: 5px 5px 5px;
+    }
+    #h3-2 {
+      box-shadow: -5px 5px 5px white;
+      text-shadow: -5px 5px 5px orange;
+      filter: drop-shadow(3px 3px 5px lightgray);
+    }
+    .exemplo{
+      background-color: gray;
+      border: 5px solid white;
+      padding: 20px;
+      /*opacity: .6;*/
+    }
+    #dio {
+      width: 50%;
+      opacity: .3;
+    }
+    .overflow{
+      background-color: gray;
+      border: 5px solid white;
+      padding: 20px;
+      width: 200px;
+      height: 200px;
+    }
+    #hidden {
+      overflow: hidden;
+    }
+    #scroll {
+      overflow: scroll;
+    }
+    #auto {
+      overflow: auto;
+    }
+    #overflow-y {
+      overflow-y: scroll
+    }
+    #overflow-x {
+      white-space: nowrap;
+      overflow-y: hidden;
+    }
+  </style>
+</head>
+<body>
+  <h2 id="topo">Propriedade <code>box-shadow</code></h2>
+  <br>
+  <div id="box-shadow"></div><br>
+  <img id="planetas" src="https://cdn-icons-png.flaticon.com/512/1789/1789881.png">
+  <img id="planeta" src="https://cdn-icons-png.flaticon.com/512/2134/2134212.png">
+  <br><br><hr>
+  <h2>Propriedade <code>text-shadow</code></h2>
+  <h3 id="h3-1">Bem vindo à Trilha de CSS na DIO!</h3>
+  <h3 id="h3-2">Bem vindo à Trilha de CSS na DIO!</h3>
+  <br><hr>
+
+  <h2>Propriedade <code>opacity</code></h2>
+  <p>Define o nível de opacidade (transparência) de um elemento.</p>
+  <p>Exemplo:</p>
+
+  <div class="exemplo">
+    <h3>Trilha de CSS</h3>
+    <p>
+      Conhecendo as propriedades CSS uma a uma.
+    </p>
+    <img id="dio" src="https://static.wixstatic.com/media/7a378f_5140deabd7d040378d740069cb692b87~mv2.png/v1/crop/x_0,y_10,w_1334,h_493/fill/w_568,h_208,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/logo%20DIO.png">
+  </div>
+  <hr>
+  <h2>Propriedade <code>overflow</code></h2>
+  <code>overflow: visible;</code><br><br>
+  <div class="overflow">
+    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem aliquam suscipit qui minus ipsam ad dolores possimus odit, deserunt sequi fugiat accusantium molestiae fugit, sapiente vel ducimus debitis facilis! Excepturi?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem porro, ab doloremque enim, rem odio quo consequatur atque voluptas harum eos quia, doloribus laboriosam velit fuga ratione minima tenetur? Ad.</p>
+  </div><br><br><br><br><br><br><br><br><br>
+
+  <code>overflow: hiden;</code><br><br>
+  <div id="hidden" class="overflow">
+    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem aliquam suscipit qui minus ipsam ad dolores possimus odit, deserunt sequi fugiat accusantium molestiae fugit, sapiente vel ducimus debitis facilis! Excepturi?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem porro, ab doloremque enim, rem odio quo consequatur atque voluptas harum eos quia, doloribus laboriosam velit fuga ratione minima tenetur? Ad.</p>
+  </div><br>
+
+  <code>overflow: scroll;</code><br><br>
+  <div id="scroll" class="overflow">
+    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem aliquam suscipit qui minus ipsam ad dolores possimus odit, deserunt sequi fugiat accusantium molestiae fugit, sapiente vel ducimus debitis facilis! Excepturi?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem porro, ab doloremque enim, rem odio quo consequatur atque voluptas harum eos quia, doloribus laboriosam velit fuga ratione minima tenetur? Ad.</p>
+  </div><br>
+
+  <code>overflow: auto;</code><br><br>
+  <div id="auto" class="overflow">
+    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem aliquam suscipit qui minus ipsam ad dolores possimus odit, deserunt sequi fugiat accusantium molestiae fugit, sapiente vel ducimus debitis facilis! Excepturi?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem porro, ab doloremque enim, rem odio quo consequatur atque voluptas harum eos quia, doloribus laboriosam velit fuga ratione minima tenetur? Ad.</p>
+  </div><br>
+  <div id="auto" class="overflow">
+    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem aliquam suscipit qui minus ipsam ad dolores possimus odit, deserunt sequi fugiat accusantium molestiae fugit, sapiente vel ducimus debitis facilis! Excepturi?</p>
+  </div><br>
+
+  <code>overflow-y;</code><br><br>
+  <div id="overflow-y" class="overflow">
+    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem aliquam suscipit qui minus ipsam ad dolores possimus odit, deserunt sequi fugiat accusantium molestiae fugit, sapiente vel ducimus debitis facilis! Excepturi?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem porro, ab doloremque enim, rem odio quo consequatur atque voluptas harum eos quia, doloribus laboriosam velit fuga ratione minima tenetur? Ad.</p>
+  </div><br>
+  <code>overflow-x</code><br><br>
+  <div id="overflow-x" class="overflow">
+    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem aliquam suscipit qui minus ipsam ad dolores possimus odit, deserunt sequi fugiat accusantium molestiae fugit, sapiente vel ducimus debitis facilis! Excepturi?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem porro, ab doloremque enim, rem odio quo consequatur atque voluptas harum eos quia, doloribus laboriosam velit fuga ratione minima tenetur? Ad.</p>
+  </div><br>
+  <hr>
+  <a href="index.html#index" target="_self" rel="noopener">Início</a>
+  <a class="topo" href="#topo"><img id="seta" title="Topo" src="https://cdn-icons-png.flaticon.com/24/130/130906.png" alt="seta para o topo"></a>
+</body>
+</html>
