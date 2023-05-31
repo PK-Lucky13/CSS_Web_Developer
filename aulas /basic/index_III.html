@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula CSS</title>
+  <style>
+    /*div + p {
+      color: orange;
+    }
+    .fundo-preto + p {
+      background: black;
+    } ESTILIZA O 1o ELEMENTO SEGUINTE AO SELETOR INDICADO À ESQUERDA */
+    div ~ p {
+      color: orange;
+    }
+    .fundo-preto ~ p {
+      background: black;
+    }
+  </style>
+</head>
+<body>
+  <h2>Combinador Irmão Adjacente</h2>
+
+  <div class="fundo-preto">
+    <p>Parágrafo 1 dentro da div</p>
+    <p>Parágrafo 2 dentro da div</p>
+    <span>
+      <p>Parágrafo 3 dentro da div, dentro do span</p>
+    </span>
+  </div>
+
+  <p>Parágrafo 4 fora da div</p>
+  <p>Parágrafo 5 fora da div</p>
+
+
+  <div class="fundo-preto">
+    <p>Parágrafo 6 dentro da div</p>
+    <p>Parágrafo 7 dentro da div</p>
+    <span>
+      <p>Parágrafo 8 dentro da div, dentro do span</p>
+    </span>
+  </div>
+
+  <p>Parágrafo 9 fora da div</p>
+  <p>Parágrafo 10 fora da div</p>
+
+  <div class="fundo-amarelo">
+    <p>Parágrafo 11 dentro da div</p>
+    <p>Parágrafo 12 dentro da div</p>
+    <span>
+      <p>Parágrafo 13 dentro da div, dentro do span</p>
+    </span>
+  </div>
+
+  <p>Parágrafo 14 fora da div</p>
+  <p>Parágrafo 15 fora da div</p>
+
+  <hr>
+  <h2><a href="index_II.html" target="_self" rel="noopener">Combinador Filho</a></h2>
+  <h2><a href="index_IV.html" target="_self" rel="noopener">ATIVIDADE</a></h2>
+  <a href="index.html" target="_self" rel="noopener">Início</a>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trila de CSS</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- -->
+  <style>
+    /*SELETORES*/
+    h1 {
+      background: gray;
+      color: whitesmoke;
+    }
+    h3 {
+      background: black;
+      color: white;
+      font-size: x-large;
+    }
+    #description{
+      font-weight: bold;
+      background: black;
+      color: white;
+    }
+    .seletores-mais-comuns{
+      background: rgb(226, 226, 226);
+    }
+    .texto-maiusculo{
+      text-transform: uppercase;
+    }
+    *{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    [title]{
+      background: black;
+      color: white;
+    }
+    [title="google"]{
+      background: none;
+      color: black;
+    }
+    [title~="servidor"]{
+      background: gray;
+      color: white;
+    }
+    /* No caso de <a title="servidor-e-mail
+       usar:
+       [title|:servidor] {...}
+    */
+    [href$=".br/"]{
+      background: yellow;
+      color: black;
+      font-style: italic;
+    }
+    /* ^ = busca o ínicio
+       $ = busca o fim
+       * = palavra especificada
+    */
+    /*AGRUPAMENTO DE SELETORES*/
+    .virgula, .utilidade{
+      background: #f1f1f1;
+      font-weight: bold;
+    }
+    [id^="botao"]{
+      background: black;
+      color: white;
+    }
+    p.texto.teste, p.texto{
+      background: #f1f1f1;
+    }
+    /*COMBINADORES*/
+    li li{
+      font-style: italic;
+    }
+    #lista-1 li{
+      background: #f1f1f1;
+    }
+    .fundo-preto li{
+      background: black;
+      color: white;
+    }
+    .fundo-amarelo li{
+      background: yellow;
+    }
+    .fundo-amarelo #sublista-3 li{
+      font-weight: bold;
+      font-style: normal;
+    }
+    /*COMBINADOR FILHO*/
+    div p {
+      background: #f1f1f1;
+    } /*Estilizou todos os "p" dentro da div, inclusive o "p" contido em span*/
+    div > p {
+      font-weight: bold;
+    } /*Estilizou somente os "p" que estão diretamente dentro da div (menos o "p" dentro de span, pois este responde direto primeiro a span, depois a div)*/
+  </style>
+  <!-- -->
+</head>
+<body>
+  <h2 style="background: black; color: white">
+    1. CSS Inline
+  </h2>
+
+  <h2><code>&lt;h2 <mark>style="background: black; color: white"</mark>> CSS Inline&lt;/h2> </code></h2>
+
+  <h3>2. CSS Interno</h2>
+
+  <h2><pre><code>&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+  &lt;title>Trilha de CSS &lt;/title>
+<mark>  &lt;style>
+  h2{
+    backgound: black;
+    color: white;
+  }
+  &lt;/style></mark>
+&lt;/head>
+&lt;body>
+  &lt;h2><mark style="background: black; color: white;">CSS Interno</mark>&lt;/h2>
+&lt;/body>
+&lt;/html>
+    </pre></code></h2>
+
+    <h4>3. CSS Externo</h4>
+
+<h2><pre><code>&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+  &lt;title>Trilha de CSS &lt;/title>
+  <mark>&lt;link rel="stylesheet" href="style.css"/></mark>
+&lt;/head>
+&lt;body>
+  &lt;h2><mark style="background: black; color: white;">CSS Externo</mark>&lt;/h2>
+&lt;/body>
+&lt;/html>
+</pre></code></h2>
+<hr>
+<h1>Seletores CSS</h1>
+<p id="description">Usados para definir as propriedades CSS referenciando o elemento de acordo com sua necessidade:</p>
+<div>
+  <ul>
+    <li class="seletores-mais-comuns"><b>Seletor por Tipo:</b> Busca elementos por uma tag HTML específica (<b>ex.: mark {cod CSS} &lt;mark> conteúdo a ser estilizado &lt;/mark>, h1 {cod CSS} &lt;h1> conteúdo a ser estilizado &lt;/h1></b>)</li>
+    <li class="seletores-mais-comuns texto-maiusculo"><b>Seletor por <mark>id (#) - o id é único por elemento</mark>:</b> Busca elementos através do atributo "id"</li>
+    <li class="seletores-mais-comuns texto-maiusculo"><b>Seletor por <mark>class (.) - pode ser usada em mais de um elemento</mark>:</b> Busca elementos através do atributo "class"</li>
+    <li><b>Seletor <mark>Universal (*) - mais usado para definir um padrão</mark>:</b> Seleciona todos os elementos HTML</li>
+    <li><b>Seletor de <mark>Atributo ([atributo])</mark>: </b>Seleciona elementos que possuem um atributo específico em nosso documento HTML e conseguimos também buscar atributos com um valor específico.</li>
+  </ul>
+</div>
+<hr>
+<p>Seletor de Atributo ([atributo])</p>
+<div>
+  <ul>
+    <li><a title="google" href="https://google.com">Google</a></li>
+    <li><a title="servidor e-mail" href="https://proton.me/pt-br/mail">Proton</a></li>
+    <li><a title="dio" href="https://dio.me">Dio</a></li>
+    <li><a title="dio" href="https://www.w3c.br/">W³C</a></li>
+    <li><a>Bitcoin</a></li>
+  </ul>
+</div>
+<hr>
+<!------------------------------>
+<h5>Agrupamento de Seletores</h5>
+<p class="virgula">Podemos aplicar as mesmas regras CSS para vários seletores diferentes.
+  Para isso, podemos separar os seletores utilizando uma vírgula (,).
+</p>
+<div class="utilidade">Assim, não precisamos duplicar os mesmos códigos para todos,
+  podemos criar um só bloco de CSS e reutilizar as regras desejadas.
+</div>
+<br><br>
+<a id="link-referencia" href="#">Documentação</a>
+<br><br>
+<a id="link-suporte" href="#">Suporte</a>
+<br><br>
+<a id="botao-voltar" href="#">Voltar</a>
+<br><br>
+<button id="botao-fechar">Fechar</button>
+<br><br>
+<p class="texto-explicativo">Outros tipos de seletores mais específicos.</p>
+<p class="texto">Vide comentário em <i>sytle</i> para melhor entendimento (seletor "p.texto").</p>
+<p class="texto teste">Neste tipo de seletor, identifica-se o tipo da tag e o atributo,
+  sem separa-los por vírgula e espaço (, ), apenas escreve-los juntos (ex.: p.texto {...}).</p>
+<hr><!--          -->
+<h5 style="font-size: larger;">Combinadores</h5>
+<p>Especifícia qual o tipo de relação entre 2 seletores, por exemplo entre 2 classes, ou uma classe e um id, ou uma tag e um seletor de atributo e assim por diante.</p>
+<p>
+  <ol>
+    <li>Combinador descendente (espaço)</li>
+    <li>Combinador filho (>)</li>
+    <li>Combinador irmão adjacente (+)</li>
+    <li>Combinador irmão em geral (~)</li>
+    <li>Estrutura: [SELETOR] [COMBINADOR] [SELETOR]</li>
+  </ol>
+
+Exemplo:</p>
+
+<!--SUBLISTA-->
+<ul>
+  <li class="fundo-cinza" id="lista-1">
+    <div>Item 1</div>
+    <ul id="sublista-1">
+      <li>Subitem A</li>
+      <li>Subitem B</li>
+    </ul>
+  </li>
+  <li class="fundo-preto" id="lista-2">
+    <div>Item 2</div>
+    <ul id="sublista-2">
+      <li>Subitem A</li>
+      <li>Subitem B</li>
+    </ul>
+  </li>
+  <li class="fundo-amarelo" id="lista-3">
+    <div>Item 3</div>
+    <ul id="sublista-3">
+      <li>Subitem A</li>
+      <li>Subitem B</li>
+    </ul>
+  </li>
+  <li class="fundo-preto" id="lista-4">
+    <div>Item 4</div>
+    <ul id="sublista-4">
+      <li>Subitem A</li>
+      <li>Subitem B</li>
+    </ul>
+  </li>
+</ul>
+<hr>
+<h5 style="font-size: large;">Combinador Filho (Child Combinator)</h5>
+<div>
+  <p>Parágrafo 1 dentro da div</p>
+  <p>Parágrafo 2 dentro da div</p>
+  <span>
+    <p>Parágrafo 3 dentro da div, dentro do span</p>
+  </span>
+</div>
+<p>Parágrafo 4, fora da div</p>
+<p>Parágrafo 5, fora da div</p>
+<hr>
+<a href="index_II.html" target="_self" rel="noopener">Combinador Filho</a><br>
+<a href="index_III.html" target="_self" rel="noopener">Combinador Irmão</a>
+
+
+</body>
+</html>

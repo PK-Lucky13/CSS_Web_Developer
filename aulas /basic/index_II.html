@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula CSS</title>
+  <style>
+    /* div > p {
+      background: #f1f1f1;
+    } aplica em todos os p dentro de div */
+    .fundo-preto > p{
+      background: black;
+      color: white;
+    }/* aplica somente nos p da div com a classe "fundo-preto" */
+    .fundo-amarelo > p {
+      background: yellow;
+    }
+  </style>
+</head>
+<body>
+  <h2>Combinador Filho (Child Combinator)</h2>
+
+  <div class="fundo-amarelo">
+    <p>Parágrafo 1 dentro da div</p>
+    <p>Parágrafo 2 dentro da div</p>
+    <span>
+      <p>Parágrafo 3 dentro da div, dentro do span</p>
+    </span>
+  </div>
+
+  <div class="fundo-amarelo">
+    <p>Parágrafo 4 dentro da div</p>
+    <p>Parágrafo 5 dentro da div</p>
+    <span>
+      <p>Parágrafo 6 dentro da div, dentro do span</p>
+    </span>
+  </div>
+
+  <div class="fundo-preto">
+    <p>Parágrafo 7 dentro da div</p>
+    <p>Parágrafo 8 dentro da div</p>
+    <span>
+      <p>Parágrafo 9 dentro da div, dentro do span</p>
+    </span>
+  </div>
+  <p>Parágrafo 10 fora da div</p>
+  <p>Parágrafo 11 fora da div</p>
+  <hr>
+  <h2><a href="index_III.html" target="_self" rel="noopener">Combinador Irmão</a></h2>
+  <a href="index.html" target="_self" rel="noopener">Voltar</a>
+
+</body>
+</html>

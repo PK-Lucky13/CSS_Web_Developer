@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COMBINANDO TUDO</title>
+  <style>
+    .fundo-preto span p{
+      background: black;
+      color: white;
+    }
+    .fundo-preto span + p{
+      background: orange;
+      color: white;
+    }
+    /*.fundo-preto span ~ p{
+      background: black;
+      color: white;
+    }*/
+    /*.fundo-preto p ~ p{
+      background: black;
+      color: white;
+    }*/
+    /*.fundo-preto p + p{
+      background: black;
+      color: white;
+    }*/
+
+  </style>
+</head>
+<body>
+  <div class="fundo-preto">
+    <p>Elemento 1</p>
+    <p>Elemento 2</p>
+    <span>
+      <p>Elemento 3</p>
+      <p>Elemento 4</p>
+    </span>
+    <p>Elemento 5</p>
+    <p>Elemento 6</p>
+  </div>
+  <hr>
+  <a href="index.html" target="_self" rel="noopener">Início</a><br>
+  <a href="index_V.html" target="_self" rel="noopener">> aula</a>
+</body>
+</html>
