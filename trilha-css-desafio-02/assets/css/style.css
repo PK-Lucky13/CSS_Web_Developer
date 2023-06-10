@@ -387,6 +387,9 @@
   width: 18.438rem;
   height: 5.625rem;
 }
+.preview:hover {
+  transform: scale(1.02);
+}
 
 .preview-link {
   height: 5.625rem;
