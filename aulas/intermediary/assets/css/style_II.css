@@ -1,0 +1,336 @@
+@import url('reset.css');
+.indice {
+  text-decoration: none;
+  color: white;
+}
+h1 {
+  color: rgb(245, 60, 50);
+}
+span {
+  background-color: rgb(245, 60, 50);
+  color: white;
+  font-weight: 900;
+  width: fit-content;
+  padding: 3px;
+}
+#flexbox {
+  padding: 50px;
+  background-color: rgb(15, 15, 15);
+  color: rgb(245, 60, 50);
+  font-weight: 700;
+}
+.titulo {
+  text-align: center;
+  font-size: 50px;
+}
+.etapa {
+  background-color: rgb(245, 60, 50);
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 10px 0;
+  font-weight: 900;
+  width: fit-content;
+  padding: 0 5px;
+}
+.subtitulo {
+  font-size: 50px;
+  color: rgb(245, 60, 50);
+  font-weight: 700;
+  margin: 0;
+}
+.container-conceitos-flexbox-pai {
+  margin-left: 50px;
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid black;
+  padding: 5px;
+}
+.container-conceitos-flexbox-filho {
+  display: inline-block;
+  align-items: center;
+  width: 130px;
+  height: 130px;
+  background-color: rgb(245, 60, 50);
+  margin: 5px;
+  text-align: center;
+  font-weight: 900;
+}
+#elemento-2 {
+  width: 170px;
+}
+#descricao {
+  margin: 0;
+  text-align: center;
+}
+.container-flex {
+  background-color: rgb(15, 15, 15);
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+}
+.container {
+  background-color: rgb(15, 15, 15);
+  padding: 20px;
+  display: inline-flex;
+}
+.item {
+  background-color: rgb(245, 60, 50);
+  margin: 10px;
+}
+.container-conceitos-flexbox {
+  margin-left: 50px;
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid black;
+  padding: 5px;
+}
+.container-conceitos-flexbox-filhos {
+  align-items: center;
+  width: 130px;
+  height: 130px;
+  background-color: rgb(245, 60, 50);
+  margin: 5px;
+  text-align: center;
+  font-weight: 900;
+}
+.caixa {
+  height: 50px;
+  width: 275px;
+}
+#container-1 {
+  flex-direction: row;
+}
+#container-2 {
+  height: 300px;
+  flex-direction: column;
+}
+#container-3 {
+  flex-direction: row-reverse;
+}
+#container-4 {
+  height: 300px;
+  flex-direction: column-reverse;
+}
+#container-5 {
+  width: 200px;
+  flex-direction: row;
+}
+#container-6 {
+  height: 300px;
+  flex-direction: column;
+}
+.container-etapa-4 {
+  background-color: rgb(15, 15, 15);
+  display: flex;
+  padding: 20px;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+.container-etapa-4r {
+  background-color: rgb(15, 15, 15);
+  display: flex;
+  padding: 20px;
+  margin: 20px;
+  flex-wrap: wrap-reverse;
+}
+#container-7 {
+  flex-flow: row nowrap;
+}
+#container-8 {
+  flex-flow: column wrap-reverse;
+  height: 300px;
+}
+.container-etapa-5 {
+  background-color: rgb(15, 15, 15);
+  display: flex;
+  padding: 20px;
+  margin: 20px;
+}
+.container-etapa-6 {
+  background-color: rgb(15, 15, 15);
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#container-9 {
+  flex-flow: row wrap;
+}
+#container-10 {
+  flex-flow: column wrap;
+  height: 300px;
+}
+.container-etapa-7 {
+  background-color: rgb(15, 15, 15);
+  margin: 20px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+#container-11 {
+  flex-flow: row;
+}
+#container-12 {
+  flex-flow: column;
+}
+/*.item-1 {
+  width: 50px;
+  height: 50px;
+}*/
+.item-2 {
+  width: 80px;
+  height: 80px;
+}
+.item-3 {
+  width: 40px;
+  height: 40px;
+}
+.item-etapa-7 {
+  background-color: rgb(245, 60, 50);
+}
+.container-etapa-8 {
+  background-color: rgb(15, 15, 15);
+  margin: 20px;
+  width: 300px;
+  height: 250px;
+  padding: 10px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  align-content: flex-start;
+}
+#container-13 {
+  flex-flow: row wrap-reverse;
+}
+#container-14 {
+  flex-flow: column wrap;
+}
+.container-etapa-9 {
+  background-color: rgb(15, 15, 15);
+  margin: 20px;
+  width: 300px;
+  height: 250px;
+  padding: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  /* !!! */
+  gap: 10px;
+}
+#container-15 {
+  flex-direction: row;
+}
+#container-16 {
+  flex-direction: column;
+}
+
+.container-etapa-11 {
+  background-color: rgb(15, 15, 15);
+  padding: 10px;
+  margin-bottom: 20px;
+  height: 200px;
+
+  /*flex container props*/
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.item-etapa-11 {
+  padding: 8px;
+  background-color: rgb(245, 60, 50);
+  flex-grow: 1;
+}
+.item-2-etapa-11 {
+  flex-grow: 2;
+}
+
+.container-etapa-12 {
+  background-color: rgb(15, 15, 15);
+  padding: 10px;
+  margin-bottom: 20px;
+
+  width: 300px;
+  height: 300px;
+
+  /*flex container props*/
+  display: flex;
+  gap: 10px;
+}
+
+#container-17 {
+  flex-flow: row nowrap;
+}
+#container-18{
+  flex-flow: column nowrap;
+}
+
+.item-etapa-12 {
+  background-color: rgb(245, 60, 50);
+  padding: 8px;
+
+  width: 50px;
+  height: 50px;
+  flex-shrink: 1;
+}
+.item-3-etapa-12{
+  flex-shrink: 3;
+}
+
+.container-etapa-13 {
+  background-color: rgb(15, 15, 15);
+  padding: 10px;
+  margin-bottom: 20px;
+  height: 200px;
+
+  /*flex container props*/
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.item-etapa-13 {
+  background-color: rgb(245, 60, 50);
+  text-align: center;
+}
+.item-2-etapa-13{
+  flex-basis: 300px;
+}
+.container-etapa-15 {
+  background-color: rgb(15, 15, 15);
+  padding: 10px;
+  margin-bottom: 20px;
+
+  width: 300px;
+  height: 300px;
+
+  /*flex container props*/
+  display: flex;
+  gap: 10px;
+  
+}
+
+#container-19 {
+  flex-flow: row nowrap;
+}
+#container-20{
+  flex-flow: column nowrap;
+}
+
+.item-etapa-15 {
+  background-color: rgb(245, 60, 50);
+  padding: 8px;
+  width: 50px;
+  height: 50px;
+  flex: 1;
+}
+
+#item-2-etapa-15 {
+  align-self: flex-end;
+}
