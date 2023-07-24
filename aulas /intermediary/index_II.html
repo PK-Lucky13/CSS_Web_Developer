@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style_I.css" />
+  <title>Posicionando os elementos em tela</title>
+</head>
+<body>
+  <h1 id="topo">Posicionando os Elementos em Tela</h1>
+  <p>A propriedade <code>position</code> manipula a localização/posição do elemento na sua página.</p>
+  <ul>
+    <li><code>position: static;</code></li>
+    <li><code>position: relative;</code></li>
+    <li><code>position: absolute;</code></li>
+    <li><code>position: fixed;</code></li>
+    <li><code>position: sticky;</code></li>
+  </ul>
+  <h2>Propriedade <code>static</code></h2>
+  <p>
+    Faz com que os elementos sigam o fluxo normal da página, ou seja, a sequência em que estiverem
+    os elementos no documento <code>html</code> é a sequência que serão exibidos na tela.
+  </p>
+  <h3>Exemplos:</h3>
+  <div id="elemento-1" class="exemplo inline">Elemento 1</div>
+  <div id="elemento-2" class="exemplo inline">Elemento 2</div>
+  <div id="elemento-3" class="exemplo inline">Elemento 3</div>
+  <hr>
+  <div id="elemento-4" class="exemplo">Elemento A</div>
+  <div id="elemento-5" class="exemplo">Elemento B</div>
+  <div id="elemento-6" class="exemplo">Elemento C</div>
+  <br><hr>
+  <h2>Propriedade <code>relative</code></h2>
+  <p>
+    Visualmente se parece com a propriedade <code>static</code>, mas quando vamos definir um elemento com uma posição
+    relativa, faz com que seja possível manipular mais 4 propriedades do elemento (top, bottom, left e right).
+  </p>
+  <h3>Exemplos:</h3>
+  <div id="elemento-1" class="exemplo inline">Elemento 1</div>
+  <div id="elemento-2" class="exemplo inline relative">Elemento 2</div>
+  <div id="elemento-3" class="exemplo inline">Elemento 3</div>
+  <p><pre>Elemento 2:<code>
+    .relative {
+      position: relative;
+      bottom: 60px; /* afastou o elemento 2, 60px do fundo do bloco */
+      left: 15px; /* afastou o elemento 2, 15px do elemento da esquerda */
+    }
+  </code></pre></p>
+  <hr>
+  <div id="elemento-4" class="exemplo">Elemento A</div>
+  <div id="elemento-5" class="exemplo relative-2">Elemento B</div>
+  <div id="elemento-6" class="exemplo">Elemento C</div>
+  <p><pre>Elemento B:<code>
+    .relative-2 {
+      position: relative;
+      top: 60px; /* afastou o elemento B 60px do topo do bloco (ou seja, afastou 60px do elemento acima) */
+      left: 130px; /* afastou o elemento B 130px da esquerda */
+    }
+  </code></pre></p>
+<hr>
+<h2>Propriedade <code>absolute</code></h2>
+<p>
+  A propriedade <code>absolute</code> faz com que o elemento saia do fluxo normal, que foi declarado no <code>html</code>,
+  ignorando totalmente os elementos/conteúdo ao seu redor, para que possamos posiciona-lo onde queremos de fato.
+</p>
+<h3>Exemplos:</h3>
+<div id="elemento-1" class="exemplo inline">Elemento 1</div>
+<div id="elemento-2" class="exemplo inline absolute">Elemento 2</div>
+<div id="elemento-3" class="exemplo inline">Elemento 3</div>
+<p><pre>Elemento 2:<code>
+  .absolute {
+    position: absolute;
+    opacity: .5;
+    left: 30px; /* afastou o elemento 2, 30px para a esquerda da página ignorando os outros elementos na linha*/
+  }
+</code></pre></p>
+<hr>
+<div id="elemento-pai">
+  <div id="elemento-filho" class="exemplo"></div>
+</div>
+<p><pre>Exemplo:<code>
+  html
+
+  &lt;div id="elemento-pai">
+    &lt;div id="elemento-filho" class="exemplo">&lt;/div>
+  &lt;/div>
+
+  css
+
+  .exemplo {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  #elemento-pai {
+    box-sizing: border-box;
+    width: 50%;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid black;
+    position: relative;
+  }
+
+  #elemento-filho {
+    background-color: palegreen;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+  }
+</code></pre></p>
+<hr>
+
+<p><pre>Jeito 1 (prof):<code>
+  html
+
+  &lt;div class="container">
+    &lt;img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Breakfast-Wraps_EXPS_TOHPP19_35683_B08_23_6b-6.jpg" alt="breakfast">
+    &lt;h3>BREAKFAST  &lt;/h3>
+  &lt;/div>
+
+  css
+
+  .container {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    position: relative;
+  }
+  .container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .container h3 {
+    font-size: 40px;
+    font-weight: 900;
+    position: absolute;
+    left: 15px;
+    top: -40px;
+  }
+</code></pre></p>
+
+<div class="container">
+  <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Breakfast-Wraps_EXPS_TOHPP19_35683_B08_23_6b-6.jpg" alt="breakfast">
+  <h3>BREAKFAST</h3>
+</div>
+
+<hr>
+
+<p><pre>Jeito 2 (simples):<code>
+  html
+
+  &lt;div class="container">
+    &lt;h3>BREAKFAST  &lt;/h3>
+  &lt;/div>
+
+  css
+
+  .container {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    background-image: url('https://www.tasteofhome.com/wp-content/uploads/2018/01/Breakfast-Wraps_EXPS_TOHPP19_35683_B08_23_6b-6.jpg');
+    background-size: contain;
+    position: relative;
+  }
+  .container h3 {
+    font-size: 40px;
+    font-weight: 900;
+    position: absolute;
+    left: 15px;
+    top: -40px;
+</code></pre></p>
+
+<div class="container">
+  <h3>BREAKFAST</h3>
+</div>
+<br>
+
+<a id="modal"
+href="https://programandosolucoes.dev.br/2022/05/24/modal-html-css/"
+target="_blank"
+rel="noopener">Modal</a>
+
+<hr>
+
+<h2>Propriedade <code>fixed</code></h2>
+<p>
+  A propriedade <code>fixed</code> faz com que o elemento permaneça fixo na página.
+</p>
+<h3>Exemplo:</h3>
+
+<p><pre>position: fixed;<code>
+  html
+
+  &lt;div id="elemento-1" class="exemplo">Elemento 1&lt;/div>
+
+  css
+
+  .exemplo {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  #elemento-1 {
+    background-color: orange;
+    position: fixed;
+  }
+</code></pre></p>
+<div class="container-sticky">
+  <hr>
+  <h2>Propriedade <code>sticky</code></h2>
+  <p>
+    A propriedade <code>sticky</code> faz com que o elemento se comporte como se fosse um elemento de <code>position: relative;</code> em um determinado espaço, e em outro determinado espaço conforme a página dá <code>scroll</code>, como se fosse um elemento de <code>position: fixed;</code>.
+  </p>
+  <h3>Exemplo:</h3>
+
+  <p><pre>position: sticky;<code>
+    html
+
+    &lt;div id="elemento-7" class="exemplo">Elemento 7&lt;/div>
+
+    css
+
+    .exemplo {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    #elemento-7 {
+      background-color: orange;
+      position: sticky;
+      bottom: 0;
+    }
+  </code></pre></p>
+  <div id="elemento-7" class="exemplo">Elemento 7</div>
+</div>
+<hr>
+<h2>Propriedade <code>z-index</code></h2>
+<p>
+  A propriedade <code>z-index</code> define a ordem que um elemento aparece na tela (a ordem que um elemento fica sobreposto ao outro).
+</p>
+<a style="text-decoration: none;" href="https://www.youtube.com/embed/kv33OYAiBwk?controls=0&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=0&origin=https%3A%2F%2Fweb.dio.me&widgetid=1" target="_blank" rel="noopener"><code>z-index</code></a>
+
+<br><hr><br>
+  <a id="aulas" href="index.html" target="_self" rel="noopener">
+    Início
+  </a>
+  <div class="topo"><a id="seta" href="#topo"></a></div>
+</body>
+</html>

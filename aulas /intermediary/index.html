@@ -1,1 +1,247 @@
-
+<!-- BACKUP -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Módulo 2 - Trilha CSS</title>
+  </head>
+  <body>
+    <div id="topo">
+      <div class="container" id="esquerda">
+        <h1>Propriedade CSS Display</h1>
+        <p>
+          A propriedade display vai determinar como as caixas dos elementos
+          devem se comportar no momento de serem exibidas na tela.
+        </p>
+        <div id="alinhamento">
+          <div class="caixas">block</div>
+          <div class="caixas">inline</div>
+          <div class="caixas">inline-block</div>
+          <div class="caixas">none</div>
+          <div class="caixas">flex</div>
+          <div class="caixas">grid</div>
+        </div>
+        <ul class="lista-inicial">
+          <li><code>list-item</code></li>
+          <li><code>inline-table</code></li>
+          <li><code>table</code></li>
+          <li><code>table-cell</code></li>
+          <li><code>table-column</code></li>
+          <li><code>table-column-group</code></li>
+          <li><code>table-footer-group</code></li>
+          <li><code>table-header-group</code></li>
+          <li><code>table-row</code></li>
+          <li><code>table-row-group</code></li>
+          <li><code>inline-flex</code></li>
+          <li><code>inline-grid</code></li>
+          <li><code>run-in</code></li>
+          <li><code>flow-root</code></li>
+          <li><code>contents</code></li>
+        </ul>
+      </div>
+      <div class="container" id="direita">
+        <h1>Todo elemento possui um display?</h1>
+        <h2>
+          Todo elemento HTML já vem com um valor de
+          <span class="display">display</span> como padrão
+        </h2>
+        <p>
+          Cada elemento HTML já possui, por padrão, um valor da propriedade
+          <span class="display">display</span> já definidas. A tag
+          <code>&lt;div></code>, por exemplo, possui um display em <i>bloco</i>,
+          enquanto a tag <code>&lt;span></code> possui o valor
+          <i>inline</i> como padrão.
+        </p>
+      </div>
+    </div>
+    <h2 style="margin-top: -20px;">Valores da propriedade <span class="display">display</span></h2>
+    <ul>
+      <li><code>display: block;</code></li>
+      <li><code>display: inline;</code></li>
+      <li><code>display: inline-block;*</code></li>
+      <li><code>display: none;*</code></li>
+    </ul>
+    <hr />
+    <code>display: block;</code>
+    <p>
+      Preenche todo o espaço ocupado pela caixa na página, da esquerda para a
+      direita, até o final.
+    </p>
+    <h3>Exemplos:</h3>
+    <div class="exemplo">
+      <code>&lt;div></code> Exemplo 1 <code>&lt;/div></code>
+    </div>
+    <p class="exemplo">
+      <code>&lt;p></code> Lorem ipsum dolor sit amet consectetur adipisicing
+      elit. Enim, earum dolore laboriosam error esse ipsum culpa magni saepe
+      aliquam illo modi blanditiis libero. Corrupti, soluta eum quisquam quos
+      tempora nobis. <code>&lt;/p></code>
+    </p>
+    <span class="exemplo"
+      ><code>&lt;span></code> Exemplo 3 <code>&lt;/span></code></span
+    >
+    <span class="exemplo"
+      ><code>&lt;span></code> Exemplo 3 <code>&lt;/span></code></span
+    ><br /><br />
+    <span class="exemplo" style="display: block"
+      ><code>&lt;span style="display: block;"></code> Exemplo 3<code
+        >&lt;/span></code
+      ></span
+    >
+    <br />
+    <code>display: inline;</code>
+    <p>Os elementos serão alocados lado a lado, ocupando a mesma linha.</p>
+    <h3>Exemplos:</h3>
+    <span class="exemplo"
+      ><code>&lt;span></code> Exemplo inline 1 <code>&lt;/span></code></span
+    >
+    <span class="exemplo"
+      ><code>&lt;span></code> Exemplo inline 2 <code>&lt;/span></code></span
+    >
+    <em class="exemplo"
+      ><code style="font-style: normal">&lt;em></code> Exempo inline 3
+      <code style="font-style: normal">&lt;/em></code></em
+    >
+    <b class="exemplo"
+      ><code style="font-style: normal">&lt;em></code> Exempo inline 4
+      <code style="font-style: normal">&lt;/em></code></b
+    >
+    <br /><br />
+    <p>
+      Lorem ipsum dolor <b class="exemplo inline">sit amet</b>consectetur
+      adipisicing elit. Aliquid architecto placeat, porro maiores tenetur sequi
+      molestias laboriosam cupiditate deleniti dolore sit at libero aperiam
+      tempore. Illo dicta necessitatibus hic dignissimos.
+    </p>
+    <code>display: inline-block;</code>
+    <p>
+      Visualmente é igual ao valor <code>inline</code>, com a diferença que com
+      o <code>inline-block</code> é possível modificar a <b>altura (heigth)</b>,
+      <b>largura (widht)</b>, <b>margin</b> e <b>padding</b> dos elementos.
+    </p>
+    <h3>Exemplos:</h3>
+    <span class="exemplo inline-block"
+      ><code>&lt;span></code> Exemplo inline-block 1
+      <code>&lt;/span></code></span
+    >
+    <em class="exemplo inline-block"
+      ><code style="font-style: normal">&lt;em></code> Exempo inline-block 2
+      <code style="font-style: normal">&lt;/em></code></em
+    >
+    <b class="exemplo inline-block"
+      ><code style="font-style: normal">&lt;em></code> Exempo inline-block 3
+      <code style="font-style: normal">&lt;/em></code></b
+    >
+    <span class="exemplo inline-block"
+      ><code>&lt;span></code> Exemplo inline-block 4
+      <code>&lt;/span></code></span
+    >
+    <em class="exemplo inline-block"
+      ><code style="font-style: normal">&lt;em></code> Exempo inline-block 5
+      <code style="font-style: normal">&lt;/em></code></em
+    >
+    <b class="exemplo inline-block"
+      ><code style="font-style: normal">&lt;em></code> Exempo inline-block 6
+      <code style="font-style: normal">&lt;/em></code></b
+    >
+    <p>
+      Lorem ipsum dolor
+      <b class="exemplo inline-block-2">sit amet</b>consectetur adipisicing
+      elit. Aliquid architecto placeat, porro maiores tenetur sequi molestias
+      laboriosam cupiditate deleniti dolore sit at libero aperiam tempore. Illo
+      dicta necessitatibus hic dignissimos.
+    </p>
+    <h3>Exemplo: <code>inline-block</code></h3>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+      </ul>
+    </nav>
+    <code>display: none;</code>
+    <p>Esconde/remove o elemento da página</p>
+    <h3>Exemplo:</h3>
+    <div class="exemplo esconder-elemento">Exemplo 1</div>
+    <hr />
+    <h2><code>display: none;</code> vs <code>visibility: hidden;</code></h2>
+    <div>
+      <span id="item-1" class="exemplo">Item 1</span>
+      <span id="item-2" class="exemplo">Item 2</span>
+      <span id="item-3" class="exemplo">Item 3</span>
+      <span id="item-4" class="exemplo">Item 4</span>
+      <span id="item-5" class="exemplo">Item 5</span>
+    </div>
+    <hr />
+    <h2>Alinhando elementos <code>inline</code></h2>
+    <h3>Propriedade <code>vertical-align</code></h3>
+    <div class="conteudo">
+      <img
+        id="item-1-1"
+        src="https://cdn-icons-png.flaticon.com/32/2111/2111463.png"
+      />
+      <span id="item-2-1" class="exemplo">Item 2</span>
+      <span id="item-3-1" class="exemplo">Item 3</span>
+    </div>
+    <hr />
+    <h2 style="text-align: center">
+      <code>display: flexbox;</code> vs <code>display: grid;</code>
+    </h2>
+    <div
+      style="
+        border-bottom: 1px solid black;
+        width: 370px;
+        margin: -10px auto 20px auto;
+      "
+    ></div>
+    <div class="lado" id="lado-esquerdo">
+      <h2>Display: <code>flex</code></h2>
+      <p>
+        O flexbox é uma forma de organizar os elementos em uma página dentro de
+        containers e de forma dinâmica, organizando os elementos em uma
+        dimensão: ou horizontalmente (as linhas), ou verticalmente (em colunas).
+      </p>
+      <br />
+      <p id="paragrafo">Flexbox: 1 dimensão</p>
+      <p id="paragrafo">➞</p>
+      <div id="flexbox-1-dimensao">
+        <span class="red-box"></span>
+        <span class="red-box"></span>
+        <span class="red-box"></span>
+      </div>
+    </div>
+    <div class="lado" id="lado-direito-1">
+      <h2>Display: <code style="background-color: transparent">grid</code></h2>
+      <p>
+        No CSS conseguimos trabalhar no nosso layout utilizando o conceito de
+        grids. O grid vai organizar os elementos em 2 dimensões: de forma
+        horizontal e vertical, definindo linhas e colunas para que os conteúdos
+        da página sejam posicionados.
+      </p>
+      <br />
+      <p id="paragrafo">Grid Layout: 2 dimensões</p>
+      <p id="paragrafo">➞</p>
+      <div id="grid-2-dimensoes">
+        <span class="red-box-1"></span>
+        <span class="red-box-2"></span>
+        <span class="red-box-2-1"></span>
+      </div>
+    </div>
+    <hr>
+    <h3>Aulas</h3>
+    <nav>
+      <ul >
+        <li><a class="aulas" href="index_III.html" target="_self" rel="noopener">
+          Trabalhando com Flexbox
+        </a></li>
+        <li><a class="aulas" href="index_II.html" target="_self" rel="noopener">
+          Posicionando elementos em tela
+        </a></li>
+      </ul>
+    </nav>
+    <div class="topo"><a id="seta" href="#topo"></a></div>
+  </body>
+</html>
