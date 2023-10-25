@@ -1,0 +1,148 @@
+@import url(fonts.css);
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 26.875rem;
+}
+
+
+/* --- HEADER START --- */
+
+header {
+  display: flex;
+  height: 31.625rem;
+  flex-shrink: 0;
+  background-image: url('../images/head.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-content {
+  display: flex;
+  padding: 0 ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  }
+
+#buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.buttons {
+  display: flex;
+  width: 23.8125rem;
+  height: 3.375rem;
+  flex-shrink: 0;
+  border-radius: 1.75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#download {
+  background: #FFF;
+}
+
+#browser {
+  background: #23272A;
+}
+
+/* --- HEADER END --- */
+
+/* --- MAIN START --- */
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  display: flex;
+  padding: 2.5rem 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+#section-2, #section-4 {
+  background: #F6F6F6;
+}
+
+/* --- MAIN END --- */
+
+/* --- FOOTER START --- */
+
+footer {
+  background: #23272A;
+  display: flex;
+  height: 8.75rem;
+  padding: 2.75rem 8.375rem 3.1875rem 8.3125rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- FOOTER END --- */
+
+/* --- MEDIA QUERY --- */
+
+@media (min-width: 49.375rem), screen and (orientation: landscape) {
+
+  body {
+    margin: 0;
+    padding: 0;
+    min-width: 49.375rem;
+  }
+
+  #header-content {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #download {
+    width: 12.8125rem;
+  }
+
+  #browser {
+    width: 17.5625rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    flex-flow: row wrap;
+  }
+  
+  #section-2 .container {
+    display: flex;
+    flex-flow: row-reverse wrap-reverse;
+  }
+
+}
