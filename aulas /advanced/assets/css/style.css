@@ -501,3 +501,25 @@ tr:nth-child(even) td {
 figcaption {
   font-size: 0.75rem;
 }
+
+.box-t {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #ff651e 0%, #00ffe5 100%);
+}
+
+.box-t:hover {
+  transform: translate(50px, -30px);
+}
+
+.box-r {
+  width: 200px;
+  height: 200px;
+  border-radius: 5%;
+  background: linear-gradient(90deg, #ff651e 0%, #00ffe5 100%);
+}
+
+.box-r:hover {
+  transform: rotate(50deg);
+}
