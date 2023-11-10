@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>CSS Web Dev</title>
+  </head>
+  <body>
+    <header>
+      <h1>Transições e Animações</h1>
+      <h2>Objetivo Geral</h2>
+      <p>
+        O objetivo geral deste curso é ensinar como podemos aplicar 
+        transições aos elementos através do CSS e animá-los.
+      </p>
+      <h3>Palavra chave - <code>transform: propriedade</code></h3>
+      <section>
+        <h2>Percurso</h2>
+        <ul>
+          <a href="#2D"><li><span> Etapa 1 </span>Transformações 2D</li></a>
+          <a href="#3D"><li><span> Etapa 2 </span>Transformações 3D</li></a>
+          <a href="#a"><li><span> Etapa 3 </span>Animações</li></a>
+        </ul>
+      </section>
+    </header>
+    <main>
+      <section id="2D">
+        <h2>Transformações 2D</h2>
+        <p>
+          Essas transformações permitem que o elemnto se mova, rotacione, 
+          escalem ou tenham alguma distorção. Sendo possível transformar qualquer tipo de elemento 
+          seja um texto, uma imagem, um botão, uma div e etc.
+        </p>
+      </section>
+      <section>
+        <h3>Transições 2D - <code>translate()</code></h3>
+        <fieldset id="2D">
+          <legend>Exemplo (passe o mouse)</legend>
+          <div class="box-t"></div>
+        </fieldset>
+      </section>
+      <section>
+        <h3>Transições 2D - <code>rotate()</code></h3>
+        <fieldset>
+          <legend>Exemplo (passe o mouse)</legend>
+          <div class="box-r"></div>
+        </fieldset>
+        <fieldset>
+          <legend>Exemplo (passe o mouse) <code>rotateX()</code> & <code>rotateY()</code></legend>
+          <div class="box-rxy"></div>
+        </fieldset>
+      </section>
+      <section>
+        <h3>Transições 2D - <code>scale()</code></h3>
+        <fieldset>
+          <legend>Exemplo (passe o mouse)</legend>
+          <div class="box-scl"></div>
+        </fieldset>
+      </section>
+      <section>
+        <h3>Transições 2D - <code>skew()</code></h3>
+        <fieldset>
+          <legend>Exemplo (passe o mouse)</legend>
+          <div class="box-skw"></div>
+        </fieldset>
+      </section>
+      <section>
+        <h3>Transições 2D - <code>matrix()</code></h3>
+        <fieldset>
+          <legend>Exemplo (passe o mouse)</legend>
+          <div class="box-mtx"></div>
+        </fieldset>
+      </section>
+      <section id="3D">
+        <h2>Transformações 3D</h2>
+        <h3>Perspectiva</h3>
+          <ul>
+            <li>A perspectiva é a forma na qual nós percebemos um objeto.</li>
+            <li>Em imagens é a perspectiva que dá a ilusão de que algo é tridimensional.</li>
+          </ul>
+        <h3>Propriedade <code>perspective</code></h3>
+          <ul>
+            <li>A propriedade define quão distante um objeto (elemento) está longe do usuário.</li>
+            <li>Um valor mais baixo / menor vai resultar em um efeito 3D mais intenso do que o valor mais alto.</li>
+            <li>Ao definir essa propriedade a um elemento, faz com que os elementos <b>filhos</b> tenham essa impressão de perspectivam <b>não o elemento por si só</b>.</li>
+          </ul>
+        <fieldset class="container-p">
+          <legend>Exemplo (passe o mouse)</legend>
+            <div class="box-p"></div>
+        </fieldset>
+      </section>
+      <section>
+        <h3>Transformações 3D - <code>rotate</code></h3>
+        <fieldset class="container-reixoz">
+          <legend>Exemplo (passe o mouse)</legend>
+          <div class="box-reixoz"></div>
+        </fieldset>
+      </section>
+      <section>
+        <h3>Transformações 3D - <code>scale</code></h3>
+        <fieldset class="container-3D">
+          <legend>Exemplo (passe o mouse)</legend>
+          <div class="box-scale3D"></div>
+        </fieldset>
+      </section>
+      <section>
+        <h3>Transformações 3D - <code>transform-origin</code></h3>
+        <fieldset>
+          <legend>Exemplo (passe o mouse)</legend>
+          <div class="box-to" id="box-to-r"></div>
+          <div class="box-to" id="box-to-s"></div>
+        </fieldset>
+      </section>
+      <section>
+        <h3>Transformações 3D - <code>transform-style</code></h3>
+        <fieldset class="container-3D-ts">
+          <legend> Exemplo </legend>
+          <div class="box-ts"></div>
+          <div class="box-ts"></div>
+        </fieldset>
+      </section>
+      <section>
+        <h3>Transformações 3D - <code>matrix3d</code></h3>
+        <fieldset class="container-3D-m3">
+          <legend> Exemplo </legend>
+          <a href="https://www.cssportal.com/css-3d-transform-generator/" target="_blank">Matrix3D</a>
+        </fieldset>
+      </section>
+      <section>
+        <h3>Transformações 3D - <code>backface-visibility</code></h3>
+        <fieldset class="container-3D">
+          <legend>Exemplo</legend>
+          <div class="box-bfv">Hello!</div>
+          <div class="box-bfh">Hello!</div>
+        </fieldset>
+      </section>
+      <section id="a">
+        <h2>Animações</h2>
+        <p>
+          Permite que o elemento mude gradualmente o estilo inicial para outro estilo definido posteriormente.
+        </p>
+      </section>
+      <section>
+        <h3>Transições - <code>transition()</code></h3>
+        <fieldset id="transition">
+          <legend>Exemplo (passe o mouse)</legend>
+          <div class="box-transition">Hello!</div>
+          <p>transisition-timing-function property</p>
+          <p>Passe o mouse sobre os elementos para ver os diferente tipos de transições.</p>
+          <div class="bt" id="div1">linear</div>
+          <div class="bt" id="div2">ease</div>
+          <div class="bt" id="div3">ease-in</div>
+          <div class="bt" id="div4">ease-out</div>
+          <div class="bt" id="div5">ease-in-out</div>
+          <p><a href="https://cubic-bezier.com/#.17,.67,.83,.67" target="_blank">cubic-bezier</a></p>
+        </fieldset>
+      </section>
+      <section>
+        <h3>Exemplos</h3>
+        <p><a href="exemplos.html" target="_blank">Ir para exemplos</a></p>
+      </section>
+    </main>
+</body>
+</html>
